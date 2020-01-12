@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/verdeLima"
+    android:paddingTop="@dimen/espacio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pre-Inscrición"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="1"
+                    android:id="@+id/uno"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+                    
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="2"
+                    android:id="@+id/dos"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="3"
+                    android:id="@+id/tres"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="4"
+                    android:id="@+id/cuatro"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="5"
+                    android:id="@+id/cinco"
+                    android:textColor="@color/colorNegro"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_blanco_style"
+                    android:layout_margin="5sp"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Información del vehículo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5.26"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <!--inicio editex estado-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:text=""
+                            android:hint="Llantas (Labrado mayor a \n 1,6 mm para vehículo liviano, \n 2 mm vehículo pesado) "
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="right"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </TextView>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:clickable="false"
+                            android:background="@drawable/radio_chulo"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:background="@drawable/radio_x"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--inicio editex kit de botiquin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_delantera_izq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:layout_weight="0.99"
+                            android:background="@drawable/edittext_style"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:ems="22"
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="left"
+                            android:hint="Delantera izquierda"
+                            android:padding="7sp"
+                            android:text=""
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"></EditText>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_delantera_izq"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="delanteraizq"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_delantera_izq_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="delanteraizq"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex kit de carretera-->
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex botiquin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_delantera_der"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Delantera derecha"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_delantera_der"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="delanterader"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_delantera_der_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="delanterader"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex botiquin-->
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex iluminacion externa-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_trasera_izq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Trasera izquierda"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_trasera_izq"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="traseraizq"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_trasera_izq_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="traseraizq"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex iluminacion externa-->
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex iluminacion interna-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_trasera_der"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Trasera derecha"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_trasera_der"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="traserader"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_trasera_der_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="traserader"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex iluminacion interna-->
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex estado mecanico-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_repuesto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Repuesto"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_repuesto"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="repuestos"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_repuesto_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="repuestos"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex estado mecanico-->
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlanco"
+                    android:text="Al dar clic en Finalizar, estás aceptando nuestros"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="4sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlanco"
+                    android:text="Términos y Condiciones"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/terminos_condiciones"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finalizar"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold"
+        android:background="@color/colorCafe"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15sp"
+        android:padding="7sp"
+        android:id="@+id/button4"
+        android:onClick="finalizar"/>
+
+
+
+</RelativeLayout>

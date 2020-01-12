@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ConductorTaxOne</string>
+    <string name="texto1_actulizacion_conductor">Esta información será usada en los servicios que le sean asignados, para información de los pasajeros.</string>
+    <string name="texto2_actulizacion_conductor">Si desea modificar sus datos, toque el siguiente botón y  un coordinador de la empresa, los validará y procederá con el cambio.</string>
+    <string name="enCamino">Cambiar estado a &#8220;En camino&#8221;</string>
+    <string name="transportado">Cambiar estado a &#8220;Transportando&#8221;</string>
+    <string name="finalizado">Cambiar estado a &#8220;Finalizado&#8221;"</string>
+    <string name="texto_help">Si no ha recibido sus credenciales de ingreso o tiene problemas con su usuario y contraseña, intente recuperar su contraseña a través de el botón &#8220;<b>¿Olvidó su contraseña?</b>&#8221; en la vista anterior. De lo contrario, escriba al correo electrónico <b>admin@taxone.com.co</b> o llame al teléfono <b>(000) 000-000</b></string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txt_continuar">Continuar</string>
+    <string name="crearorecuperarcontra">Crear o recuperar contraseña</string>
+    <string name="title_home">Servicio</string>
+    <string name="title_dashboard">Mi perfil</string>
+    <string name="title_notifications">Historico</string>
+    <string name="alert_login"> <b>Tus datos no parecen estar correctos. Revisa tu usuario y/o contraseña.</b> </string>
+    <string name="authorities">com.tactoapps.android.fileprovider.taxone</string>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/coordinatorLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_blanco"
+              android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blanco"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@color/verdeLima">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:layout_marginLeft="12dp"
+                />
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blanco"
+                android:layout_weight="1"
+                android:text="RETRASOS"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/btnmas"
+                android:onClick="didTapNuevo">
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="6dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/btn_mas"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/verdeLima">
+            <ListView
+                android:id="@+id/retrasos_list_view"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+
+                android:divider="@color/colorGrisClaro"
+                android:dividerHeight="1dp">
+            </ListView>
+
+            <FrameLayout
+                android:id="@+id/vacio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/verdeLima">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="200dp"
+                        android:layout_gravity="center"
+                        android:text="Sin resultados.\nAún no hay ningún retraso registrado"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="13sp"/>
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

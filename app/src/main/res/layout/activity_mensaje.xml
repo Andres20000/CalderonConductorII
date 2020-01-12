@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/verdeLima">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/verdeLima">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/numero_orden"
+            android:text="ENVIAR MENSAJE"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/verdeLima"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/post_border_background">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione un mensaje que desee enviar al pasajero:"
+            android:background="@drawable/post_border_style"
+            android:textColor="@color/colorCafe"
+            android:textStyle="bold"
+            android:editable="false"
+            android:padding="5sp"
+            android:layout_marginBottom="1sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:id="@+id/asignarMensaje"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.2px"
+            android:background="@color/verdeLima"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mensaje1"
+            android:clickable="true"
+            android:text="Voy en camino"
+            android:background="@color/color_blanco"
+            android:textColor="@color/colorCafe"
+            android:padding="5sp"
+            android:onClick="opcion1"
+            android:layout_marginBottom="2sp"
+            android:layout_gravity="left"
+            android:gravity="left|center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.2px"
+            android:background="@color/verdeLima"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mensaje2"
+            android:text="Estoy llegando"
+            android:background="@color/color_blanco"
+            android:textColor="@color/colorCafe"
+            android:padding="5sp"
+            android:layout_marginBottom="2sp"
+            android:onClick="opcion2"
+            android:layout_gravity="left"
+            android:gravity="left|center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.2px"
+            android:background="@color/verdeLima"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mensaje3"
+            android:text="Estoy en el punto de recogida"
+            android:onClick="opcion3"
+            android:clickable="true"
+            android:background="@color/color_blanco"
+            android:textColor="@color/colorCafe"
+            android:padding="5sp"
+            android:layout_marginBottom="2sp"
+            android:layout_gravity="left"
+            android:gravity="left|center"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+    
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar mensaje"
+        android:onClick="enviarMensaje"
+        android:background="@color/colorCafe"
+        android:textColor="@color/color_blanco"
+        android:inputType="textCapSentences"
+        android:backgroundTint="@color/colorCafe"/>
+
+
+</LinearLayout>

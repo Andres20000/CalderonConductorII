@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+    android:background="@color/verdeLima">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/verdeLima">
+
+        <LinearLayout
+            android:id="@+id/layerOtros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/verdeLima"
+            android:padding="0dp"
+            android:layout_marginBottom="4dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/color_blanco"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="SERVICIOS SOLICITADOS"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:textColor="@color/color_blanco"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:background="@drawable/post_border_style">
+            <LinearLayout
+                android:id="@+id/layerProgramar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/borde_redondeado_oscuro"
+                android:padding="2dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="4dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A PROGRAMAR: "
+                    android:paddingStart="6dp"
+                    android:textColor="@color/color_blanco"/>
+                <TextView
+                    android:id="@+id/fechaprogramar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="right"
+                    android:paddingEnd="6dp"
+
+                    android:textColor="@color/color_blanco"
+
+                    android:text="Hoy 3:30 PM"/>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="6dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="4dp">
+                            <ImageView
+                                android:id="@+id/foto"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:padding="0dp"
+                                android:src="@drawable/nofoto"/>
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="6dp"
+                                android:src="@drawable/flecha_direccion_i5"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_gravity="center_vertical|left">
+                                <TextView
+                                    android:id="@+id/origen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dosquebradas Calle 57 6-89   "
+                                    />
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="8dp"/>
+                                <TextView
+                                    android:id="@+id/destino"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dosquebradas Carrera 29B"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/nombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carlos Ortiz | 7:24 PM"
+                            android:layout_marginStart="8dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/circulo_claro">
+                            <TextView
+                                android:id="@+id/distancia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8.3"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_blanco"
+                                android:textSize="19sp"/>
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="top|center"
+                            android:textColor="@color/verdeLima"
+                            android:textSize="16sp"
+                            android:text="km"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/franjaRoja"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_rojo"
+                    android:alpha="0.6"
+                    android:text="Cancelado"
+                    android:textSize="22dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_blanco"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

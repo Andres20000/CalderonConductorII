@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdeLima"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/verdeLima">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/numero_orden"
+            android:text="ÚLTIMOS 20 SERVICIOS"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/verdeLima"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv"
+            android:divider="@color/colorTransparente">
+        </ListView>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:id="@+id/progressBar3"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="117dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/sindatos"
+            android:layout_height="wrap_content"
+            android:text="Sin Datos."
+            android:layout_marginTop="40sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_blanco"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/verdeLima"
+    android:paddingTop="@dimen/espacio"
+    android:id="@+id/mRlView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pre-Inscrición"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="1"
+                    android:id="@+id/uno"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="2"
+                    android:id="@+id/dos"
+                    android:textColor="@color/colorNegro"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_blanco_style"
+                    android:layout_margin="5sp"
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="3"
+                    android:id="@+id/tres"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="4"
+                    android:id="@+id/cuatro"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="5"
+                    android:id="@+id/cinco"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos del conductor"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:id="@+id/camara1"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/foto_i5"
+                android:layout_gravity="center"
+                android:onClick="camara1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subir Perfil"
+                android:id="@+id/txt_camara1"
+                android:layout_below="@+id/imageView3"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color_blanco"
+                android:textSize="@dimen/size_texto_simple"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txt_nombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:background="@drawable/edittext_style"
+                    android:text=""
+                    android:hint="Nombres"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:inputType="textAutoCorrect"
+                    android:layout_weight="1">
+                </EditText>
+
+
+                <Space
+                    android:layout_width="5sp"
+                    android:layout_height="10sp" />
+
+
+                <EditText
+                    android:id="@+id/txt_apellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:background="@drawable/edittext_style"
+                    android:text=""
+                    android:hint="Apellidos"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:inputType="textAutoCorrect"
+                    android:layout_weight="1">
+                </EditText>
+
+            </LinearLayout>
+
+
+            <!--fin editex propietario-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+
+                   <!--inicio editex cedula-->
+                   <EditText
+                       android:id="@+id/txt_cedula"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentStart="true"
+                       android:layout_centerVertical="true"
+                       android:layout_toLeftOf="@+id/imageView2"
+                       android:background="@drawable/edittext_style"
+                       android:text=""
+                       android:hint="Cédula"
+                       android:textColor="@color/colorNegro"
+                       android:textSize="17sp"
+                       android:textStyle="bold"
+                       android:padding="5sp"
+                       android:inputType="number"
+                       android:layout_weight="1"
+                       android:maxLength="14">
+                   </EditText>
+                   <!--fin editex cedula-->
+
+                   <Space
+                       android:layout_width="5sp"
+                       android:layout_height="10sp" />
+
+                   <EditText
+                       android:id="@+id/txt_celular"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentStart="true"
+                       android:layout_centerVertical="true"
+                       android:layout_toLeftOf="@+id/imageView2"
+                       android:background="@drawable/edittext_style"
+                       android:text=""
+                       android:hint="Celular"
+                       android:textColor="@color/colorNegro"
+                       android:textSize="17sp"
+                       android:textStyle="bold"
+                       android:padding="5sp"
+                       android:inputType="number"
+                       android:layout_weight="1"
+                       android:maxLength="10">
+                   </EditText>
+
+               </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/espacio" />
+
+                <!--inicio editex direccion-->
+                <EditText
+                    android:id="@+id/txt_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:background="@drawable/edittext_style"
+                    android:text=""
+                    android:hint="Dirección"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:inputType="textAutoComplete|textAutoCorrect">
+                </EditText>
+                <!--fin editex direccion-->
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+                <EditText
+                    android:id="@+id/txt_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:background="@drawable/edittext_style"
+                    android:text=""
+                    android:hint="Correo electrónico"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:inputType="textEmailAddress">
+                </EditText>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+                <EditText
+                    android:id="@+id/txt_passwor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:background="@drawable/edittext_style"
+                    android:text=""
+                    android:hint="Contraseña"
+                    android:textColor="@color/colorNegro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:inputType="textPassword">
+                </EditText>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+            <!--inicio editex propietario-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBlanco">
+
+                    <EditText
+                        android:id="@+id/txt_Licencia_de_transito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageView2"
+                        android:background="@drawable/edittext_style"
+                        android:text=""
+                        android:hint="Licencia de Tránsito (Fecha Expiración)"
+                        android:editable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:enabled="true"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:padding="5sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.99">
+                    </EditText>
+
+                    <ImageView
+                        android:background="@drawable/calendario"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:clickable="false"
+                        android:layout_margin="5sp"
+                        android:onClick="fecha"
+                        android:id="@+id/cal_1"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--fin editex propietario-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/espacio" />
+
+            <!--inicio editex propietario-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBlanco"
+                    android:clickable="true"
+                    android:onClick="listadoCategorias">
+
+                    <EditText
+                        android:id="@+id/txt_categoria_licencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageView2"
+                        android:background="@drawable/edittext_style"
+                        android:text=""
+                        android:hint="Categoría licencia"
+                        android:editable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:enabled="true"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:padding="5sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.99"
+                        android:onClick="listadoCategorias">
+                    </EditText>
+
+                    <ImageView
+                        android:background="@drawable/btn_flecha_abajo"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:clickable="false"
+                        android:layout_margin="5sp"
+                        android:onClick="listadoCategorias"
+                        android:id="@+id/flecha"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--fin editex propietario-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_continuar"
+                android:textColor="@color/colorBlanco"
+                android:textStyle="bold"
+                android:background="@color/colorCafe"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15sp"
+                android:padding="7sp"
+                android:onClick="continuar2"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

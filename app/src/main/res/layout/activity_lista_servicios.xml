@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:text="DISPONIBLE"
+        android:gravity="center"
+        android:textColor="@color/colorBlanco"
+        android:textSize="@dimen/size_texto"
+        android:background="@color/colorCafe"
+        android:id="@+id/btn_disponible"
+        android:onClick="disponivilidad"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SERVICIOS  ASIGNADOS"
+        android:gravity="center"
+        android:textColor="@color/color_blanco"
+        android:textSize="14sp"
+        android:layout_margin="4dp"
+        android:id="@+id/tituloAsignados"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView1"
+        android:layout_below="@+id/btn_disponible"
+        android:divider="@color/colorTransparente"
+        android:dividerHeight="4dp"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:id="@+id/progressBar3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/sindatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Por el momento no tiene servicios activos."
+        android:textColor="@color/color_blanco"
+        android:visibility="visible" />
+
+</LinearLayout>
+

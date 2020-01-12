@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    android:orientation="vertical"
+    android:background="@color/colorFondoRegistro"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="vertical"
+
+        android:onClick="didTapFondo">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:background="@color/colorNegro">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_positivo"
+                android:paddingStart="6dp"
+                android:paddingTop="6dp"
+                android:background="@color/colorNegro"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:src="@drawable/cuadros_negros"/>
+            
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="Formulario de inscripción"
+            android:textColor="@color/colorBlanco"
+            android:background="@color/colorNegro"
+            android:padding="6dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/colorBlanco">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorNegro"
+                android:alpha="0.75"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/ayudanos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorNegro"
+            android:text="DATOS DEL CONDUCTOR"
+
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_persona"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombres"
+                    android:hint="Nombres"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_persona"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/apellidos"
+                    android:hint="Apellidos"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorBlanco">
+                    <FrameLayout
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/imge_telefono"/>
+                    </FrameLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/celular"
+                        android:hint="Celular"
+                        android:inputType="phone"
+                        android:textColor="@color/colorNegro"
+                        android:focusableInTouchMode="true"
+                        style="@style/EditTextFondoBlancoTax1"/>
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorBlanco">
+                    <FrameLayout
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/imge_identificacion"/>
+                    </FrameLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cedula"
+                        android:hint="Cédula"
+                        android:inputType="number"
+                        android:textColor="@color/colorNegro"
+                        android:focusableInTouchMode="true"
+                        style="@style/EditTextFondoBlancoTax1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_direccion"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/direccion"
+                    android:hint="Dirección"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_correo"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correo"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_contrasena"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorClaroTaxiOne"
+                android:text="Subir foto"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:onClick="didTapSubirFoto"
+                />
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/foto"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorNegro"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorNegro"
+            android:text="DATOS DEL VEHÍCULO"
+            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorBlanco">
+                    <FrameLayout
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/imge_carro"/>
+                    </FrameLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/placa"
+                        android:hint="Placa"
+                        android:inputType="textCapCharacters"
+                        android:textColor="@color/colorNegro"
+                        android:focusableInTouchMode="true"
+                        style="@style/EditTextFondoBlancoTax1"/>
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorBlanco">
+                    <FrameLayout
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/imge_carro"/>
+                    </FrameLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/marca"
+                        android:hint="Marca"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorNegro"
+                        android:focusableInTouchMode="true"
+                        style="@style/EditTextFondoBlancoTax1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_direccion"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/referencia"
+                    android:hint="Referencia (ej. Spark)"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlanco">
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/imge_calendario"/>
+                </FrameLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modelo"
+                    android:hint="Modelo"
+                    android:inputType="number"
+                    android:textColor="@color/colorNegro"
+                    android:focusableInTouchMode="true"
+                    style="@style/EditTextFondoBlancoTax1"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorNegro"
+                android:text="Finalizar"
+                android:textColor="@color/colorBlanco"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:onClick="didTapOKContinuar"
+                android:layout_marginBottom="45dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
+

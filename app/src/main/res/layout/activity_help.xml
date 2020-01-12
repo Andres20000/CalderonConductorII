@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ececec"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo_i5"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Para usar esta aplicación, usted debe ser un conductor registrado en Integral Service."
+               android:textColor="@color/colorCafe"
+               android:layout_marginTop="5sp"/>
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Si usted ha sido registrado, un correo electrónico con su usuario y contraseña debió ser enviado a su cuenta corporativa o personal, registrada en Integral Service."
+               android:textColor="@color/colorCafe"
+               android:layout_marginTop="5sp"/>
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="@string/texto_help"
+               android:textColor="@color/colorCafe"
+               android:layout_marginTop="5sp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Escribir a admin@integralservice.com.co"
+               android:background="@color/colorCafe"
+               android:textColor="@color/color_blanco"
+               android:layout_marginBottom="1sp"
+               android:layout_marginTop="5sp"
+               android:onClick="correo"
+               android:inputType="textCapCharacters"
+               android:paddingBottom="14sp"
+               android:paddingTop="14sp"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:clickable="true"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="llamar al (311) 208-2296"
+               android:background="@color/colorCafe"
+               android:textColor="@color/color_blanco"
+               android:onClick="llamar"
+               android:inputType="textCapCharacters"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Cancelar"
+               android:background="@color/colorCafe"
+               android:textColor="@color/color_blanco"
+               android:layout_marginTop="5sp"
+               android:onClick="cancelar"
+               android:inputType="textCapCharacters"/>
+
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

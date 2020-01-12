@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/layoutGeneral"
+              android:layout_marginTop="6dp"
+              android:layout_marginBottom="2dp"
+
+              android:layout_marginStart="12dp"
+              android:layout_marginEnd="12dp"
+              android:paddingStart="6dp"
+              android:paddingEnd="6dp"
+              android:descendantFocusability="beforeDescendants"
+              android:background="@color/verdeLima">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Motivo"
+            android:gravity="center"
+            android:textColor="@color/color_blanco"/>
+
+        <EditText
+            android:id="@+id/motivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGris"
+            android:layout_marginStart="8dp"
+            android:text=""
+            android:inputType="textPersonName"
+            style="@style/EditTextFondoBlanco"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="INICIO"
+            android:gravity="center"
+            android:textColor="@color/color_blanco"/>
+
+        <TextView
+            android:id="@+id/inicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:text="00:00"
+            android:gravity="center"
+            android:padding="6dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@color/color_blanco"
+            android:background="@color/colorGris_claro"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="FIN"
+            android:gravity="center"
+            android:textColor="@color/color_blanco"/>
+
+        <TextView
+            android:id="@+id/fin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:text="00:00"
+            android:gravity="center"
+            android:padding="6dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@color/color_blanco"
+            android:background="@color/colorGris_claro"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/colorCafe"
+            android:inputType="textCapSentences"
+            android:text="Comenzar"
+            android:padding="8dp"
+            android:textColor="@color/color_blanco" />
+
+
+        <TextView
+            android:id="@+id/lbDuracion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="DURACION"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/color_blanco"/>
+
+
+        <TextView
+            android:id="@+id/cron"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:text="00:00"
+            android:gravity="center"
+            android:padding="6dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColor="@color/color_blanco"
+            android:background="@color/colorGris_claro"/>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/verdeLima"/>
+
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/verdeLima"
+        android:id="@+id/linearLayout6">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/numero_orden"
+            android:text="Ubicación"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/verdeLima"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_above="@+id/button6"
+        android:layout_alignParentLeft="true">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="transcalderonpasajero.transcalderonpasajero.MapsActivity" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abrir en Waze"
+        android:background="@color/verdeLima"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/color_blanco"
+        android:id="@+id/button6"
+        android:onClick="compatirubicacion"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
+
+

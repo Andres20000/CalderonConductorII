@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdeLima"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verdeLima"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="2.5"
+                android:background="@null"
+                android:paddingTop="11sp"
+                android:paddingBottom="11sp" />
+
+            <Button
+                android:id="@+id/numero_orden"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="numero_de_orden"
+                android:textColor="#FFF" />
+
+
+            <ImageView
+                android:id="@+id/cancelar_servicio"
+                android:layout_width="65sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:onClick="cancelarServicio"
+                android:orientation="vertical"
+                android:paddingTop="11sp"
+                android:paddingBottom="11sp"
+                android:src="@drawable/btn_cancelar_i5" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fondo_blanco_style"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5sp"
+                                android:paddingRight="5dp">
+
+                                <TextView
+                                    android:id="@+id/txt_consecutivo_orden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="0dp"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlative_ciudades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+
+                                <TextView
+                                    android:id="@+id/text_ciudad_origen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bogotá"
+                                    android:textSize="13sp" />
+
+                                <ImageView
+                                    android:id="@+id/imagen_estado"
+                                    android:layout_width="120sp"
+                                    android:layout_height="20sp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true" />
+
+                                <TextView
+                                    android:id="@+id/text_ciudad_llegada"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="Bogotá"
+                                    android:textSize="13sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/linea_borde"
+                                android:layout_below="@+id/rlative_ciudades"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@color/color_gris_linea"
+                                android:text="_" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/relative2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10sp">
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="62dp"
+                                    android:padding="3dp"
+
+                                    android:src="@drawable/flecha_direccion_i5" />
+
+                                <TextView
+                                    android:id="@+id/barrio_recogida"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toStartOf="@+id/compartir_ubicacion"
+                                    android:layout_toLeftOf="@+id/compartir_ubicacion"
+                                    android:layout_toEndOf="@+id/imageView4"
+                                    android:layout_toRightOf="@+id/imageView4"
+                                    android:text="barrio_recogida" />
+
+                                <TextView
+                                    android:id="@+id/direcion_recogida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignStart="@+id/barrio_recogida"
+                                    android:layout_alignLeft="@+id/barrio_recogida"
+                                    android:layout_alignBottom="@+id/compartir_ubicacion"
+                                    android:text="" />
+
+                                <ImageView
+                                    android:id="@+id/compartir_ubicacion"
+                                    android:layout_width="30sp"
+                                    android:layout_height="45sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/btn_mapa_i5"
+                                    android:onClick="gps" />
+
+                                <TextView
+                                    android:id="@+id/direcion_llegada"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_below="@+id/imageView4"
+                                    android:layout_alignStart="@+id/direcion_recogida"
+                                    android:layout_alignLeft="@+id/direcion_recogida"
+                                    android:layout_toStartOf="@+id/compartir_ubicacion"
+                                    android:layout_toLeftOf="@+id/compartir_ubicacion"
+                                    android:text="" />
+
+                                <TextView
+                                    android:id="@+id/txt_abierto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/linearLayout2"
+                                    android:layout_toEndOf="@+id/imageView4"
+                                    android:layout_toRightOf="@+id/imageView4"
+                                    android:text="Abierto"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/imageView7"
+                                    android:layout_width="25sp"
+                                    android:layout_height="25sp"
+                                    android:layout_alignBottom="@+id/linearLayout2"
+                                    android:layout_toEndOf="@+id/imageView4"
+                                    android:layout_toRightOf="@+id/imageView4"
+                                    android:background="@drawable/mas"
+                                    android:onClick="nuevoDestino"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/hoistorialdestinos"
+                                    android:layout_width="25sp"
+                                    android:layout_height="15sp"
+                                    android:layout_alignBottom="@+id/linearLayout2"
+                                    android:layout_toEndOf="@+id/imageView7"
+                                    android:layout_toRightOf="@+id/imageView7"
+                                    android:background="@drawable/vista"
+                                    android:onClick="destinoHistorial"
+                                    android:paddingLeft="2sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/barrio_llegada"
+                                    android:layout_width="280dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@+id/linearLayout2"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_toStartOf="@+id/compartir_ubicacion"
+                                    android:layout_toLeftOf="@+id/compartir_ubicacion"
+                                    android:layout_toEndOf="@+id/hoistorialdestinos"
+                                    android:layout_toRightOf="@+id/hoistorialdestinos"
+                                    android:paddingLeft="2sp"
+                                    android:text="barrio_llegada" />
+
+
+                                <ImageView
+                                    android:id="@+id/documento"
+                                    android:layout_width="30sp"
+                                    android:layout_height="40sp"
+                                    android:layout_above="@+id/direcion_llegada"
+                                    android:layout_alignEnd="@+id/direcion_llegada"
+                                    android:layout_alignRight="@+id/direcion_llegada"
+                                    android:layout_marginEnd="-29dp"
+                                    android:layout_marginRight="-29dp"
+                                    android:layout_marginBottom="-19dp"
+                                    android:background="@drawable/btn_documento_i5"
+                                    android:visibility="invisible" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imageView4"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:orientation="vertical">
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/sumDirecto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout7"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="Distancia Recorrida"
+                                    android:textColor="@color/verdeLima"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/linea_borde"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@color/color_gris_linea"
+                                    android:text="_" />
+
+
+                                <TextView
+                                    android:id="@+id/fecha_y_hora_recogida"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout7"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="fecha_y_hora_recogida"
+                                    android:textColor="@color/verdeLimaTextoDos" />
+
+
+                                <TextView
+                                    android:id="@+id/liana8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/linea_borde"
+                                    android:layout_below="@+id/fecha_y_hora_recogida"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@color/color_gris_linea"
+                                    android:text="_" />
+
+                                <TextView
+                                    android:id="@+id/vehiculo_asignado"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/liana8"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="vehiculo_asignado:"
+                                    android:textColor="@color/verdeLimaTextoDos" />
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/linea_borde"
+                                    android:layout_below="@+id/vehiculo_asignado"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/color_gris_linea"
+                                    android:text="_" />
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textView10"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="2sp"
+                                    android:gravity="left|center"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageView5"
+                                        android:layout_width="8sp"
+                                        android:layout_height="20sp"
+                                        android:src="@drawable/icon_persona_i5"
+
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentLeft="true"/>
+
+                                    <TextView
+                                        android:id="@+id/textView12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_toEndOf="@+id/imageView5"
+                                        android:layout_toRightOf="@+id/imageView5"
+                                        android:paddingLeft="3sp"
+                                        android:text="Pasajeros:" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/layout_pasa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_below="@+id/textView10"
+                                    android:layout_alignEnd="@+id/relativeLayout"
+                                    android:layout_alignRight="@+id/relativeLayout"
+                                    android:paddingRight="10dp"
+                                    android:clickable="true"
+                                    android:onClick="listaPasajeros"
+                                    android:paddingTop="6dp">
+
+                                    <TextView
+                                        android:id="@+id/cantidad_pasajeros"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2"
+                                        android:textSize="15sp" />
+
+                                    <ImageView
+                                        android:id="@+id/flechap"
+                                        android:layout_width="10sp"
+                                        android:layout_height="16sp"
+                                        android:layout_gravity="center"
+                                        android:background="@null"
+                                        android:gravity="right|center"
+                                        android:src="@drawable/btn_flecha_adelante_i5"
+                                        android:layout_marginLeft="3sp"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tamanolistapasajeros"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1sp"
+                                    android:background="@drawable/post_border_style">
+
+                                    <TextView
+                                        android:id="@+id/nombre"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:maxLength="25"
+                                        android:text="nombre" />
+
+                                    <TextView
+                                        android:id="@+id/celular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:maxLength="14"
+                                        android:text="Celular" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:text="Servicio Prestado a:" />
+
+                            <TextView
+                                android:id="@+id/idCliente"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:text=""
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/acetar_rechazar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:background="@color/colorCafe"
+                            android:inputType="textCapSentences"
+                            android:onClick="acetar_servicio"
+                            android:text="Aceptar Servicio"
+                            android:textColor="@color/color_blanco" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:background="@color/color_rojo"
+                            android:inputType="textCapSentences"
+                            android:onClick="rechazar_servicio"
+                            android:text="Rechazar Servicio"
+                            android:textColor="@color/color_blanco" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/estadservicios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texto_cambio_estado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5sp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#FFF" />
+
+                            <ImageView
+                                android:id="@+id/estado_conductor"
+                                android:layout_width="match_parent"
+                                android:layout_height="40sp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="5sp" />
+
+                            <Button
+                                android:id="@+id/bonton_estado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5sp"
+                                android:background="@color/color_blanco"
+                                android:inputType="textCapCharacters"
+                                android:onClick="cambiarEstadoServicio"
+                                android:text="Cambiar estado a &#8220;En camino&#8221;"
+                                android:textColor="@color/verdeLimaTextoDos" />
+
+                            <Button
+                                android:id="@+id/btn_puntorecojida"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0sp"
+                                android:background="@color/color_blanco"
+                                android:inputType="textCapCharacters"
+                                android:onClick="notificaion_recojida"
+                                android:text="Notificar llegada a punto de recogida"
+                                android:textColor="@color/verdeLima"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/texto_foter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="El o los pasajeros serán notificados que el servicio se dirige al punto de recogida "
+                                android:textColor="@color/color_blanco" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal">
+
+
+
+                            <LinearLayout
+                                android:id="@+id/layRetrasos"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:onClick="setRetrasos"
+                                android:background="@color/colorCafe">
+
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/retrasos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0sp"
+                                    android:inputType="textCapSentences"
+                                    android:onClick="setRetrasos"
+                                    android:text="Retrasos"
+                                    android:gravity="center"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorNegro"/>
+
+                                <ImageView
+                                    android:id="@+id/cron"
+                                    android:padding="5dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/img_cronometro_negro"/>
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"/>
+
+
+
+                            </LinearLayout>
+
+
+                            <Space
+                                android:id="@+id/espacioRetra"
+                                android:layout_width="8dp"
+                                android:layout_height="match_parent"/>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0sp"
+                                android:background="@color/colorCafe"
+                                android:inputType="textCapSentences"
+                                android:onClick="enviarMensaje"
+                                android:text="Enviar mensaje"
+
+                                android:layout_weight="1"
+                                android:textColor="@color/color_blanco" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_cotizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5sp" />
+
+                        <TextView
+                            android:id="@+id/txt_cotizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="¿Qué precio tendría este servicio?"
+                            android:textColor="@color/color_blanco"
+                            android:textStyle="bold" />
+
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5sp" />
+
+                        <EditText
+                            android:id="@+id/preciocotizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="1sp"
+                            android:background="@color/color_blanco"
+                            android:hint="$"
+                            android:inputType="number"
+                            android:maxLength="8"
+                            android:padding="10sp" />
+
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5sp" />
+
+
+                        <Button
+                            android:id="@+id/btn_cotizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:background="@color/colorCafe"
+                            android:inputType="textCapSentences"
+                            android:onClick="btncotizar"
+                            android:text="Enviar"
+                            android:textColor="@color/color_blanco" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/paradasobserbaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5sp"
+                        android:background="@color/colorBlanco"
+                        android:orientation="vertical">
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/cotiobs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paradas"
+                            android:layout_margin="1sp"
+                            android:background="@color/colorBlanco"
+                            android:clickable="true"
+                            android:onClick="observaciones"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:id="@+id/btn_obser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25sp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:clickable="true"
+                                android:gravity="left|center"
+                                android:inputType="textCapSentences"
+                                android:onClick="observaciones"
+                                android:text="Observaciones"
+                                android:textColor="@color/colorGris_claro" />
+
+                            <ImageView
+                                android:id="@+id/flecha2"
+                                android:layout_width="10sp"
+                                android:layout_height="16sp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:onClick="observaciones"
+                                android:src="@drawable/btn_flecha_adelante_i5" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/linea_borde"
+                            android:layout_below="@+id/rlative_ciudades"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@color/color_gris_linea"
+                            android:text="_" />
+
+
+                        <LinearLayout
+                            android:id="@+id/paradas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3sp"
+                            android:background="@color/colorBlanco"
+                            android:clickable="true"
+                            android:onClick="paradas"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:id="@+id/btn_paradas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25sp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:clickable="true"
+                                android:gravity="left|center"
+                                android:inputType="textCapSentences"
+                                android:onClick="paradas"
+                                android:text="Paradas: 2"
+                                android:textColor="@color/colorGris_claro" />
+
+                            <ImageView
+                                android:id="@+id/flecha"
+                                android:layout_width="10sp"
+                                android:layout_height="16sp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:gravity="right|center"
+                                android:onClick="paradas"
+                                android:src="@drawable/btn_flecha_adelante_i5" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

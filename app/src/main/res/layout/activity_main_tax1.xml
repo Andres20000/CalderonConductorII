@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFondoRegistro">
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/colorNegro">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/cuadros_negros"
+            android:scaleType="fitEnd"
+            android:layout_gravity="top"
+            />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="60dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/logo_positivo"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conductores"
+                android:textColor="@color/colorBlanco"
+                android:layout_gravity="bottom|right"
+                android:textSize="18sp"/>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorBlanco"
+            android:alpha="0.25"
+            />
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="52dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:id="@+id/correo"
+            android:inputType="textWebEmailAddress"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/color_gris_linea"
+            android:textColor="@color/colorNegro"
+            android:background="@color/colorBlanco"
+            android:textSize="@dimen/size_texto"
+            android:padding="10sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contrasena"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColorHint="@color/color_gris_linea"
+            android:textColor="@color/colorNegro"
+            android:background="@color/colorBlanco"
+            android:textSize="@dimen/size_texto"
+            android:padding="10sp"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="37sp"
+            android:id="@+id/button"
+            android:text="Iniciar sesión"
+            android:background="@color/colorNegro"
+            android:textColor="@color/color_blanco"
+            android:onClick="login"
+            android:textSize="@dimen/size_texto"
+            android:layout_marginTop="24dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Olvidé mi contraseña"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/verdeLimaTextoDos"
+        android:id="@+id/textView4"
+        android:clickable="true"
+        android:onClick="olvidopassword"
+        android:layout_marginTop="18dp"/>
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:onClick="click_resgirtarme">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Eres un taxista nuevo?"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/textView5"
+            android:textColor="@color/verdeLimaTextoDos"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Inscríbete aquí"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:onClick="click_resgirtarme"
+            android:background="@color/colorFondoRegistro"
+            android:textColor="@color/verdeLimaTextoDos"
+            android:id="@+id/resgirtarme"/>
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:src="@drawable/cuadros_amarillos"
+        android:scaleType="fitEnd"
+        />
+
+
+</LinearLayout>

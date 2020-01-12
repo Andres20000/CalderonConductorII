@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/verdeLima"
+    android:paddingTop="@dimen/espacio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pre-Inscrición"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="1"
+                    android:id="@+id/uno"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+                    
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="2"
+                    android:id="@+id/dos"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+                    
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="3"
+                    android:id="@+id/tres"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="4"
+                    android:id="@+id/cuatro"
+                    android:textColor="@color/colorBlanco"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_verde_oscuro_post_border_style"
+                    android:layout_margin="5sp"
+                    />
+
+                <Button
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:text="5"
+                    android:id="@+id/cinco"
+                    android:textColor="@color/colorNegro"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/circulo_blanco_style"
+                    android:layout_margin="5sp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Información del vehículo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5.26"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <!--inicio editex estado-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:text=""
+                            android:hint="Estado "
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="right"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </TextView>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:clickable="false"
+                            android:background="@drawable/radio_chulo"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio_x"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--inicio editex kit de botiquin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_kit_de_carretera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:ems="22"
+                            android:hint="Kit de carretera"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_kit_de_carretera"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio"
+                            android:onClick="kit"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_kit_de_carretera_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio"
+                            android:onClick="kit"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex kit de carretera-->
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+                
+                <!--inicio editex botiquin-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_botiquin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Botiquín"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_botiquin"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="botiquin"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_botiquin_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="botiquin"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex botiquin-->
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex iluminacion externa-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_iluminacion_externa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Iluminación externa"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_iluminacion_externa"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="iluminacionExt"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_iluminacion_externa_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio"
+                            android:onClick="iluminacionExt"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex iluminacion externa-->
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex iluminacion interna-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_iluminacion_interna"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Iluminación interna"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_iluminacion_interna"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="iluminacionInt"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_iluminacion_interna_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio"
+                            android:onClick="iluminacionInt"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex iluminacion interna-->
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex estado mecanico-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_estado_medico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Estado mecánico"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_estado_mecanico"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="estadoMec"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_estado_mecanico_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="estadoMec"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex estado mecanico-->
+
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex estado aire acondicionado-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_aire_acondicionado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Aire acondicionado"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_aire_acondicionado"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="aireAcondi"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_aire_acondicionado_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:background="@drawable/radio"
+                            android:onClick="aireAcondi"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex aire acondicionado-->
+
+
+                <Space
+                    android:layout_width="4sp"
+                    android:layout_height="4sp" />
+
+                <!--inicio editex latoneria y pintura-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/txt_latoneria_y_pintura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:background="@drawable/edittext_style"
+                            android:text=""
+                            android:hint="Latonería y pintura"
+                            android:editable="false"
+                            android:cursorVisible="false"
+                            android:ems="22"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:enabled="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:padding="7sp"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.99">
+                        </EditText>
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_latoneria_y_pintura"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="latoneriaP"
+                            android:background="@drawable/radio"/>
+
+                        <Space
+                            android:layout_width="4sp"
+                            android:layout_height="4sp" />
+
+
+                        <Button
+                            android:id="@+id/check_latoneria_y_pintura_x"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center"
+                            android:gravity="right|center"
+                            android:onClick="latoneriaP"
+                            android:background="@drawable/radio"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--fin editex aire latoneria_y_pintura-->
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/espacio" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_continuar"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold"
+        android:background="@color/colorCafe"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15sp"
+        android:padding="7sp"
+        android:id="@+id/button4" 
+        android:onClick="continuar5"/>
+
+
+
+</RelativeLayout>

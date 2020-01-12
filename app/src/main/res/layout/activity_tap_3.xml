@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/verdeLima"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HISTÓRICOS DE SERVICIOS"
+        android:gravity="center"
+        android:textColor="@color/color_blanco"
+        android:textSize="@dimen/size_texto"
+        android:id="@+id/textView5"
+        android:layout_marginTop="11sp"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="5sp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:orientation="horizontal"
+           android:background="@color/color_blanco">
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/numero_orden"
+               android:text="Ver últimos 20 servicios prestados"
+               android:textColor="@color/colorCafe"
+               android:layout_weight="0.5"
+               android:layout_marginLeft="2sp"
+               android:editable="false"
+               android:layout_gravity="center"
+               android:background="@color/color_blanco"
+               android:onClick="historial"
+               android:clickable="true"
+               android:textSize="15sp"/>
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="40sp"
+               android:id="@+id/btn1"
+               android:layout_weight="5"
+               android:src="@drawable/btn_flecha_adelante"
+               android:paddingBottom="11sp"
+               android:paddingTop="11sp"
+               android:background="@color/color_blanco"
+               android:onClick="historial"/>
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="1sp"
+           android:layout_marginTop="5sp"
+           android:text="_"
+           android:background="@color/color_gris_linea"/>
+
+
+       <TextView
+           android:layout_marginTop="5sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Búsqueda detallada:"
+           android:textColor="@color/color_blanco"
+           android:gravity="center"
+           android:textSize="15sp"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5sp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:background="@color/color_blanco">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/textView13"
+                android:textColor="@color/colorCafe"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="Seleccione mes y año"
+                android:id="@+id/fechaHistorial"
+                android:onClick="calendar"
+                android:clickable="true"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorCafe"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5sp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_blanco">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textSize="15sp"
+                android:textColor="@color/colorCafe"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView11"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/selecioneCliente"
+                android:textSize="15sp"
+                android:textColor="@color/verdeLima"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar por criterios seleccionados"
+        android:gravity="center"
+        android:layout_marginTop="5sp"
+        android:background="@color/colorCafe"
+        android:textColor="@color/colorBlanco"
+        android:onClick="buscar"/>
+
+    </LinearLayout>
+
+</LinearLayout>

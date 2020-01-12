@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/verdeLima">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/verdeLima">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/numero_orden"
+            android:text="MI PERFIL"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/verdeLima"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:id="@+id/imageView3"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/foto_i5"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar Perfil"
+                android:id="@+id/textView7"
+                android:layout_below="@+id/imageView3"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color_blanco"
+                android:textSize="@dimen/size_texto_simple"
+                android:layout_gravity="center"/>
+            
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nombre"
+                android:layout_centerHorizontal="true"
+                android:background="@color/color_blanco"
+                android:padding="10sp"
+                android:layout_marginBottom="1sp"
+                android:hint="nombre"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_blanco"
+                    android:padding="10sp"
+                    android:hint="Apellido"
+                    android:layout_marginBottom="1sp"
+                    android:editable="false"
+                    android:layout_weight="2"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/apellido"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_blanco"
+                    android:padding="10sp"
+                    android:layout_marginBottom="1sp"
+                    android:hint="Apellido"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_blanco"
+                    android:padding="10sp"
+                    android:layout_marginBottom="1sp"
+                    android:hint="Número de contacto"
+                    android:editable="false"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/celular"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_blanco"
+                    android:padding="10sp"
+                    android:layout_marginBottom="1sp"
+                    android:hint="celular"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp"
+                    android:layout_gravity="right"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ok, enviar cambios"
+                android:id="@+id/button3"
+                android:layout_below="@+id/button2"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorCafe"
+                android:layout_marginTop="5sp"
+                android:padding="10sp"
+                android:onClick="actualizarDatos"
+                android:textColor="@color/color_blanco"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
