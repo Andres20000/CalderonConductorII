@@ -31,6 +31,6 @@ public class Params {
     public  boolean registroConductorRequiereAprobacionAdmin = false;
 
     public  boolean MostrarAlertasCambioEstados = false;
-
+    public  boolean MostrarInfoSensible = false;
 
 }

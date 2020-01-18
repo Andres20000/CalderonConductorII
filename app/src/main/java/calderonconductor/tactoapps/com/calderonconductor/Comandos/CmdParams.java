@@ -99,6 +99,10 @@ public class CmdParams {
                     modelo.params.MostrarAlertasCambioEstados = (boolean)snap.child("MostrarAlertasCambioEstados").getValue();
                 }
 
+                if (snap.hasChild("MostrarInfoSensible")){
+                    modelo.params.MostrarInfoSensible = (boolean)snap.child("MostrarInfoSensible").getValue();
+                }
+
 
 
                 listenerP.cargoOpcionesGenerales();

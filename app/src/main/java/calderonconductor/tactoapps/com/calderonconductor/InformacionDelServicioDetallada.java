@@ -30,8 +30,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoCliente
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoListadoPasajeros;
 
 
-
-public class InformacionDelServicioDetallada extends Activity implements  ComandoListadoPasajeros.OnComandoPasajerosChangeListener, ComandoCliente.OnClienteChangeListener, Modelo.OnModeloChangelistener {
+public class InformacionDelServicioDetallada extends Activity implements ComandoListadoPasajeros.OnComandoPasajerosChangeListener, ComandoCliente.OnClienteChangeListener, Modelo.OnModeloChangelistener {
 
     String idServicio;
     TextView numero_orden;
@@ -228,7 +227,6 @@ public class InformacionDelServicioDetallada extends Activity implements  Comand
     private void displayListaComentarios() {
 
 
-
     }
 
 
@@ -244,31 +242,31 @@ public class InformacionDelServicioDetallada extends Activity implements  Comand
             flechap.setVisibility(View.GONE);
         }
 
+        if (modelo.params.MostrarInfoSensible) {
+            String telefono = "";
+            for (int i = 0; i < modelo.getOrdenHistorial(idServicio).pasajeros.size(); i++) {
 
-        String telefono = "";
-        for (int i = 0; i < modelo.getOrdenHistorial(idServicio).pasajeros.size(); i++) {
+                if (modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getIdPasajero().equals(modelo.getOrdenHistorial(idServicio).getSolicitadoPor())) {
+                    nombre.setText(modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getNombre() + " " + modelo.getOrdenHistorial(idServicio).pasajeros.get(0).getApellido());
+                    celular.setText(modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getCelular());
+                    telefono = modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getCelular();
 
-            if (modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getIdPasajero().equals(modelo.getOrdenHistorial(idServicio).getSolicitadoPor())) {
-                nombre.setText(modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getNombre() + " " + modelo.getOrdenHistorial(idServicio).pasajeros.get(0).getApellido());
-                celular.setText(modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getCelular());
-                telefono = modelo.getOrdenHistorial(idServicio).pasajeros.get(i).getCelular();
+                }
 
             }
 
+            final String finalTelefono = telefono;
+            celular.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:" + finalTelefono));
+                    startActivity(callIntent);
+
+
+                }
+            });
         }
-
-
-        final String finalTelefono = telefono;
-        celular.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:" + finalTelefono));
-                startActivity(callIntent);
-
-
-            }
-        });
     }
 
     @Override
