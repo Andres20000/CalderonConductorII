@@ -788,40 +788,45 @@ public class InformacionServicio extends Activity implements  ComandoListadoPasa
             estado2 = " ";
         }
 
+        if(modelo.params.MostrarAlertasCambioEstados) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                    context);
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
+            // set title
+            alertDialogBuilder.setTitle("Cambio de estado");
 
-        // set title
-        alertDialogBuilder.setTitle("Cambio de estado");
+            // set dialog message
+            alertDialogBuilder
+                    .setMessage("¿Deseas cambiar tu estado " + "'" + ordenConductor.getEstado() + estado2 + "'?")
+                    .setCancelable(false)
+                    .setPositiveButton("SI, CAMBIAR", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            //alert
+                            comandoOrdenesConductor.actualizarEstado(ordenConductor.getEstado(), ordenConductor.getId());
+                            notificarYFinalizar();
 
-        // set dialog message
-        alertDialogBuilder
-                .setMessage("¿Deseas cambiar tu estado " + "'" + ordenConductor.getEstado() + estado2 + "'?")
-                .setCancelable(false)
-                .setPositiveButton("SI, CAMBIAR", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //alert
-                        comandoOrdenesConductor.actualizarEstado(ordenConductor.getEstado(), ordenConductor.getId());
-                        notificarYFinalizar();
+                        }
+                    });
 
-                    }
-                });
+            alertDialogBuilder.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //
+                }
+            });
 
-        alertDialogBuilder.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            try {
+                alertDialog.show();
+            } catch (Exception ex) {
             }
-        });
-
-        // create alert dialog
-        AlertDialog alertDialog = alertDialogBuilder.create();
-
-        // show it
-        try {
-            alertDialog.show();
-        } catch (Exception ex) {
+        }
+        else{
+            comandoOrdenesConductor.actualizarEstado(ordenConductor.getEstado(), ordenConductor.getId());
+            notificarYFinalizar();
         }
     }
 

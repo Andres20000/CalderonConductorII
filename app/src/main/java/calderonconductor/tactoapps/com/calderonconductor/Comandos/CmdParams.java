@@ -95,6 +95,10 @@ public class CmdParams {
                     modelo.params.registroConductorRequiereAprobacionAdmin = (boolean)snap.child("registroConductorRequiereAprobacionAdmin").getValue();
                 }
 
+                if (snap.hasChild("MostrarAlertasCambioEstados")){
+                    modelo.params.MostrarAlertasCambioEstados = (boolean)snap.child("MostrarAlertasCambioEstados").getValue();
+                }
+
 
 
                 listenerP.cargoOpcionesGenerales();
