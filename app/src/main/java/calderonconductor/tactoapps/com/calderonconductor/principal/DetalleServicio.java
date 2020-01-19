@@ -808,43 +808,48 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
             estado2 = " ";
         }
 
+        if(modelo.params.mostrarAlertasCambioEstados) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                    context);
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
+            // set title
+            alertDialogBuilder.setTitle("Cambio de estado");
 
-        // set title
-        alertDialogBuilder.setTitle("Cambio de estado");
+            // set dialog message
+            alertDialogBuilder
+                    .setMessage("¿Deseas cambiar tu estado " + "'" + orden.getEstado() + estado2 + "'?")
+                    .setCancelable(false)
+                    .setPositiveButton("SI, CAMBIAR", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            //alert
+                            bonton_estado.setClickable(false);
+                            bonton_estado.setEnabled(false);
+                            Log.i("TIEMPOX", "Deseas cambiar estado de la orden");
+                            cambiarEstado(orden);
 
-        // set dialog message
-        alertDialogBuilder
-                .setMessage("¿Deseas cambiar tu estado " + "'" + orden.getEstado() + estado2 + "'?")
-                .setCancelable(false)
-                .setPositiveButton("SI, CAMBIAR", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //alert
-                        bonton_estado.setClickable(false);
-                        bonton_estado.setEnabled(false);
-                        Log.i("TIEMPOX", "Deseas cambiar estado de la orden");
-                        cambiarEstado(orden);
+                        }
+                    });
 
-                    }
-                });
+            alertDialogBuilder.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //
+                }
+            });
 
-        alertDialogBuilder.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            try {
+                alertDialog.show();
+            } catch (Exception ex) {
             }
-        });
-
-        // create alert dialog
-        AlertDialog alertDialog = alertDialogBuilder.create();
-
-        // show it
-        try {
-            alertDialog.show();
-        } catch (Exception ex) {
         }
+        else{
+            cambiarEstado(orden);
+        }
+
     }
 
 
