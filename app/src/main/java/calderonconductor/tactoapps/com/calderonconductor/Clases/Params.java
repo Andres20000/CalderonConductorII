@@ -30,7 +30,7 @@ public class Params {
     public boolean diseñoRegistroTax1 = false;
     public  boolean registroConductorRequiereAprobacionAdmin = false;
 
-    public  boolean MostrarAlertasCambioEstados = false;
-    public  boolean MostrarInfoSensible = false;
+    public  boolean mostrarAlertasCambioEstados = false;
+    public  boolean mostrarInfoSensible = false;
 
 }

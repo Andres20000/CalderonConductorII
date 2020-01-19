@@ -95,12 +95,12 @@ public class CmdParams {
                     modelo.params.registroConductorRequiereAprobacionAdmin = (boolean)snap.child("registroConductorRequiereAprobacionAdmin").getValue();
                 }
 
-                if (snap.hasChild("MostrarAlertasCambioEstados")){
-                    modelo.params.MostrarAlertasCambioEstados = (boolean)snap.child("MostrarAlertasCambioEstados").getValue();
+                if (snap.hasChild("mostrarAlertasCambioEstados")){
+                    modelo.params.mostrarAlertasCambioEstados = (boolean)snap.child("mostrarAlertasCambioEstados").getValue();
                 }
 
-                if (snap.hasChild("MostrarInfoSensible")){
-                    modelo.params.MostrarInfoSensible = (boolean)snap.child("MostrarInfoSensible").getValue();
+                if (snap.hasChild("mostrarInfoSensible")){
+                    modelo.params.mostrarInfoSensible = (boolean)snap.child("mostrarInfoSensible").getValue();
                 }
 
 

@@ -788,7 +788,7 @@ public class InformacionServicio extends Activity implements  ComandoListadoPasa
             estado2 = " ";
         }
 
-        if(modelo.params.MostrarAlertasCambioEstados) {
+        if(modelo.params.mostrarAlertasCambioEstados) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                     context);
 

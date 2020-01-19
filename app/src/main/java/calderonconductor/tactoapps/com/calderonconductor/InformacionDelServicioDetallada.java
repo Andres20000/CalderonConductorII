@@ -242,7 +242,7 @@ public class InformacionDelServicioDetallada extends Activity implements Comando
             flechap.setVisibility(View.GONE);
         }
 
-        if (modelo.params.MostrarInfoSensible) {
+        if (modelo.params.mostrarInfoSensible) {
             String telefono = "";
             for (int i = 0; i < modelo.getOrdenHistorial(idServicio).pasajeros.size(); i++) {
 
