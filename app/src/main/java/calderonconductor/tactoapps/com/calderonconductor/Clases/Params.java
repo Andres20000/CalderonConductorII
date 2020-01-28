@@ -32,5 +32,6 @@ public class Params {
 
     public  boolean mostrarAlertasCambioEstados = false;
     public  boolean mostrarInfoSensible = false;
+    public  boolean autoAsignarServicios = false;
 
 }
