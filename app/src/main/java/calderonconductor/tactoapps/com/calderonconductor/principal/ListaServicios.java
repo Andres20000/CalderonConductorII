@@ -57,6 +57,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenes
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor.OnFinalizarOrden;
 import calderonconductor.tactoapps.com.calderonconductor.R;
 import calderonconductor.tactoapps.com.calderonconductor.particular.ListaServiciosParticularAdapter;
+import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService;
 
 public class ListaServicios extends Activity {
 
@@ -97,7 +98,9 @@ public class ListaServicios extends Activity {
         btn_disponible = (Button) findViewById(R.id.btn_disponible);
 
 
-
+        if(modelo.params.autoAsignarServicios){
+            lanzarLocService();
+        }
         if (modelo.params.hasRegistroInmediato) {  //modo Uber
             mAdapter = new ListaServiciosParticularAdapter(this,  modelo.getOrdenes());
         }else {
@@ -305,6 +308,10 @@ public class ListaServicios extends Activity {
 
     }
 
+    private void lanzarLocService() {
+        Intent i = new Intent(this, LocService.class);
+        startService(i);
+    }
 
     public void playDir(String idOrden){
 

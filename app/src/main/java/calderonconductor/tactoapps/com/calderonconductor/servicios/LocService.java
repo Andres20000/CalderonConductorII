@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 import org.joda.time.DateTime;
 
 
+import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnCheckEstado;
@@ -63,7 +64,7 @@ public class LocService extends Service {
 
     int acumPlanos = 0;
 
-
+    Modelo modelo = Modelo.getInstance();
 
 
     public interface OnLocCambio{
