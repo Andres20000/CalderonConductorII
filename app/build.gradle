@@ -8,8 +8,8 @@ android {
         applicationId "calderonconductor.tactoapps.com.calderonconductor"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 85
-        versionName "1.85"
+        versionCode 88
+        versionName "1.89"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -64,7 +64,7 @@ android {
 
         }
 
-        autoline {
+         autoline {
             minSdkVersion 19
             applicationId 'tapp.tactoapps.autoline'
             targetSdkVersion 28

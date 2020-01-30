@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CalderonConductor.iml" filepath="$PROJECT_DIR$/CalderonConductor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CalderonConductorII.iml" filepath="$PROJECT_DIR$/CalderonConductorII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/CalderonConductorII-app.iml" filepath="$PROJECT_DIR$/app/CalderonConductorII-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

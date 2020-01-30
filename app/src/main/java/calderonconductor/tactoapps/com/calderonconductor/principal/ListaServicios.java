@@ -48,6 +48,7 @@ import java.io.IOException;
 import calderonconductor.tactoapps.com.calderonconductor.Adapter.OrdenesConductorAdapter;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.UbicacionConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnOrdenesDescargaListener;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnOrdenesListener;
@@ -55,6 +56,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConduct
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConductor.OnTerceroEstadoListener;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor.OnFinalizarOrden;
+import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoUbicacionConductor;
 import calderonconductor.tactoapps.com.calderonconductor.R;
 import calderonconductor.tactoapps.com.calderonconductor.particular.ListaServiciosParticularAdapter;
 import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService;
@@ -99,7 +101,7 @@ public class ListaServicios extends Activity {
 
 
         if(modelo.params.autoAsignarServicios){
-            lanzarLocService();
+            startLocationUpdates();
         }
         if (modelo.params.hasRegistroInmediato) {  //modo Uber
             mAdapter = new ListaServiciosParticularAdapter(this,  modelo.getOrdenes());
@@ -203,7 +205,10 @@ public class ListaServicios extends Activity {
                     if (loc != null && loc.getLatitude() != 0 && loc.getAccuracy() < 30 && modelo.cLoc != null) {
 
                         float temDistancia = loc.distanceTo(modelo.cLoc);
-
+                        UbicacionConductor ubi = new UbicacionConductor();
+                        ubi.setLat(loc.getLatitude());
+                        ubi.setLon(loc.getLongitude());
+                        ComandoUbicacionConductor.NuevaUbicacionConductor(ubi, modelo.vehiculo.getPlaca());
                         Log.i("LOCATION","Nueva Distancia ===== " + temDistancia);
                         if (temDistancia > 100){
                             modelo.latitud = loc.getLatitude();
@@ -306,11 +311,6 @@ public class ListaServicios extends Activity {
 
         }
 
-    }
-
-    private void lanzarLocService() {
-        Intent i = new Intent(this, LocService.class);
-        startService(i);
     }
 
     public void playDir(String idOrden){
