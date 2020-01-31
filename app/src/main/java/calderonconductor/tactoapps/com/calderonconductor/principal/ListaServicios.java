@@ -100,9 +100,9 @@ public class ListaServicios extends Activity {
         btn_disponible = (Button) findViewById(R.id.btn_disponible);
 
 
-        if(modelo.params.autoAsignarServicios){
+        if(modelo.params.autoAsignarServicios)
             startLocationUpdates();
-        }
+
         if (modelo.params.hasRegistroInmediato) {  //modo Uber
             mAdapter = new ListaServiciosParticularAdapter(this,  modelo.getOrdenes());
         }else {
@@ -205,10 +205,6 @@ public class ListaServicios extends Activity {
                     if (loc != null && loc.getLatitude() != 0 && loc.getAccuracy() < 30 && modelo.cLoc != null) {
 
                         float temDistancia = loc.distanceTo(modelo.cLoc);
-                        UbicacionConductor ubi = new UbicacionConductor();
-                        ubi.setLat(loc.getLatitude());
-                        ubi.setLon(loc.getLongitude());
-                        ComandoUbicacionConductor.NuevaUbicacionConductor(ubi, modelo.vehiculo.getPlaca());
                         Log.i("LOCATION","Nueva Distancia ===== " + temDistancia);
                         if (temDistancia > 100){
                             modelo.latitud = loc.getLatitude();
@@ -216,6 +212,8 @@ public class ListaServicios extends Activity {
                             modelo.cLoc = loc;
                             modelo.updateLastLocation(loc);
                             mAdapter.notifyDataSetChanged();
+                            if(modelo.params.autoAsignarServicios)
+                                ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude()), modelo.vehiculo.getPlaca());
                         }
 
                         return;

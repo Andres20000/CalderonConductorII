@@ -1,34 +1,20 @@
 package calderonconductor.tactoapps.com.calderonconductor.Comandos;
 
-import android.support.annotation.NonNull;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
+import java.util.HashMap;
+import java.util.Map;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.UbicacionConductor;
 
 public class ComandoUbicacionConductor {
 
-    public static void NuevaUbicacionConductor(UbicacionConductor ubicacionConductor, String idConductor){
+    public static void ActualizaUbicacionConductor(UbicacionConductor ubicacionConductor, String idConductor){
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference ref = database.getReference();
-        ref.child("ubicacionConductor");
-        ref.push().setValue(ubicacionConductor);
-   /*     ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        final DatabaseReference ref3 = database.getReference("ubicacionConductor");
 
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });*/
-
-
+        Map<String, Double> ubicacion = new HashMap<>();
+        ubicacion.put("lat", ubicacionConductor.getLat());
+        ubicacion.put("lon", ubicacionConductor.getLon());
+        ref3.child(idConductor).setValue(ubicacion);
     }
 }

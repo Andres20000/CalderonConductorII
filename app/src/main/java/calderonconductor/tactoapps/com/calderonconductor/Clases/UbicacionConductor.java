@@ -9,6 +9,11 @@ public class UbicacionConductor {
 
     }
 
+    public UbicacionConductor(double Lat, double Lon){
+        this.setLat(Lat);
+        this.setLon(Lon);
+    }
+
     public double getLat() {
         return lat;
     }
