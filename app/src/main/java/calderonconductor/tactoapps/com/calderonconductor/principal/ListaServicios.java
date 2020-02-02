@@ -206,14 +206,14 @@ public class ListaServicios extends Activity {
 
                         float temDistancia = loc.distanceTo(modelo.cLoc);
                         Log.i("LOCATION","Nueva Distancia ===== " + temDistancia);
+                        if(modelo.params.autoAsignarServicios)
+                            ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude()), modelo.vehiculo.getPlaca());
                         if (temDistancia > 100){
                             modelo.latitud = loc.getLatitude();
                             modelo.longitud = loc.getLongitude();
                             modelo.cLoc = loc;
                             modelo.updateLastLocation(loc);
                             mAdapter.notifyDataSetChanged();
-                            if(modelo.params.autoAsignarServicios)
-                                ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude()), modelo.vehiculo.getPlaca());
                         }
 
                         return;
