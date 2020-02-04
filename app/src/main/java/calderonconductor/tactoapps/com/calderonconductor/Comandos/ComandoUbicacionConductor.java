@@ -15,8 +15,7 @@ public class ComandoUbicacionConductor {
         final DatabaseReference ref3 = database.getReference("ubicacionConductor");
 
         Map<String, Object> ubicacion = new HashMap<>();
-        ubicacion.put("lat", ubicacionConductor.getLat());
-        ubicacion.put("lon", ubicacionConductor.getLon());
+        ubicacion.put("location", ubicacionConductor.getGeoLocalizacion());
         ubicacion.put("asignadoPor", ubicacionConductor.getAsignadoPor());
         ubicacion.put("color", ubicacionConductor.getColor());
         ubicacion.put("estado", ubicacionConductor.getEstado());

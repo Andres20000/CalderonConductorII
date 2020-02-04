@@ -2,8 +2,7 @@ package calderonconductor.tactoapps.com.calderonconductor.Clases;
 
 public class UbicacionConductor {
 
-    private double lat;
-    private double lon;
+    private GeoLocalizacion geolocalizacion;
     private String matricula;
     private String color;
     private String marca;
@@ -17,10 +16,9 @@ public class UbicacionConductor {
 
     }
 
-    public UbicacionConductor(double Lat, double Lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String OfertadaATerceros, String Referencia, String FechaHora){
-        this.setLat(Lat);
-        this.setLon(Lon);
-        this.setMatricula(Matricula) ;
+    public UbicacionConductor(double lat, double lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String OfertadaATerceros, String Referencia, String FechaHora){
+        this.setGeoLocalizacion(new GeoLocalizacion(lat, lon));
+        this.setMatricula(Matricula);
         this.setColor(Color);
         this.setMarca(Marca);
         this.setAsignadoPor(AsignadaPor);
@@ -30,21 +28,7 @@ public class UbicacionConductor {
         this.setFechaHora(FechaHora);
     }
 
-    public double getLat() {
-        return lat;
-    }
 
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLon() {
-        return lon;
-    }
-
-    public void setLon(double lon) {
-        this.lon = lon;
-    }
 
     public String getMatricula() {
         return matricula;
@@ -109,4 +93,13 @@ public class UbicacionConductor {
     public void setFechaHora(String fechaHora) {
         this.fechaHora = fechaHora;
     }
+
+    public GeoLocalizacion getGeoLocalizacion() {
+        return geolocalizacion;
+    }
+
+    public void setGeoLocalizacion(GeoLocalizacion geolocalizacion) {
+        this.geolocalizacion = geolocalizacion;
+    }
 }
+
