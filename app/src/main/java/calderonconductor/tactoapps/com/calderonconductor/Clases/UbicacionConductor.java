@@ -11,13 +11,16 @@ public class UbicacionConductor {
     private String ofertadaATerceros;
     private String referencia;
     private String fechaHora;
+    private double lat;
+    private double lon;
 
     public UbicacionConductor(){
 
     }
 
     public UbicacionConductor(double lat, double lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String OfertadaATerceros, String Referencia, String FechaHora){
-        this.setGeoLocalizacion(new GeoLocalizacion(lat, lon));
+        this.setLat(lat);
+        this.setLon(lon);
         this.setMatricula(Matricula);
         this.setColor(Color);
         this.setMarca(Marca);
@@ -94,12 +97,20 @@ public class UbicacionConductor {
         this.fechaHora = fechaHora;
     }
 
-    public GeoLocalizacion getGeoLocalizacion() {
-        return geolocalizacion;
+    public double getLat() {
+        return lat;
     }
 
-    public void setGeoLocalizacion(GeoLocalizacion geolocalizacion) {
-        this.geolocalizacion = geolocalizacion;
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLon() {
+        return lon;
+    }
+
+    public void setLon(double lon) {
+        this.lon = lon;
     }
 }
 
