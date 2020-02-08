@@ -2,7 +2,6 @@ package calderonconductor.tactoapps.com.calderonconductor.Clases;
 
 public class UbicacionConductor {
 
-    private GeoLocalizacion geolocalizacion;
     private String matricula;
     private String color;
     private String marca;

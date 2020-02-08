@@ -32,7 +32,11 @@ public class ComandoUbicacionConductor {
         ubicacion.put("referencia", ubicacionConductor.getReferencia());
         ubicacion.put("fechaActualizacion", ubicacionConductor.getFechaHora());
         ubicacion.put("g", "dr5x186m7u");
+        if (idConductor == null){
+            ref3.child("123456").setValue(ubicacion);
+        }else{
+            ref3.child(idConductor).setValue(ubicacion);
+        }
 
-        ref3.child(idConductor).setValue(ubicacion);
     }
 }
