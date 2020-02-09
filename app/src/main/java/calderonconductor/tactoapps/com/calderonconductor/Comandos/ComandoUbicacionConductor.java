@@ -20,7 +20,7 @@ public class ComandoUbicacionConductor {
 
     public static void ActualizaUbicacionConductor(UbicacionConductor ubicacionConductor, String idConductor){
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference ref3 = database.getReference("ubicacionConductor");
+        final DatabaseReference ref3 = database.getReference("ubicacionConductores");
         Map<String, Object> ubicacion = new HashMap<>();
         ubicacion.put("I", Arrays.asList(ubicacionConductor.getLat(), ubicacionConductor.getLon()));
         ubicacion.put("asignadoPor", ubicacionConductor.getAsignadoPor());
