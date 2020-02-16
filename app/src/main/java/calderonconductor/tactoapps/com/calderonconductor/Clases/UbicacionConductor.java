@@ -12,12 +12,11 @@ public class UbicacionConductor {
     private String fechaHora;
     private double lat;
     private double lon;
-
     public UbicacionConductor(){
 
     }
 
-    public UbicacionConductor(double lat, double lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String OfertadaATerceros, String Referencia, String FechaHora){
+    public UbicacionConductor(double lat, double lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String  OfertadaATerceros, String Referencia, String FechaHora){
         this.setLat(lat);
         this.setLon(lon);
         this.setMatricula(Matricula);
@@ -29,7 +28,6 @@ public class UbicacionConductor {
         this.setReferencia(Referencia);
         this.setFechaHora(FechaHora);
     }
-
 
 
     public String getMatricula() {

@@ -22,7 +22,7 @@ public class ComandoUbicacionConductor {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference ref3 = database.getReference("ubicacionConductores");
         Map<String, Object> ubicacion = new HashMap<>();
-        ubicacion.put("I", Arrays.asList(ubicacionConductor.getLat(), ubicacionConductor.getLon()));
+/*
         ubicacion.put("asignadoPor", ubicacionConductor.getAsignadoPor());
         ubicacion.put("color", ubicacionConductor.getColor());
         ubicacion.put("estado", ubicacionConductor.getEstado());
@@ -31,7 +31,10 @@ public class ComandoUbicacionConductor {
         ubicacion.put("ofertadaATerceros", ubicacionConductor.getOfertadaATerceros());
         ubicacion.put("referencia", ubicacionConductor.getReferencia());
         ubicacion.put("fechaActualizacion", ubicacionConductor.getFechaHora());
-        ubicacion.put("g", "dr5x186m7u");
+        ubicacion.put("conductor", idConductor);*/
+        ubicacion.put(".priority", "d2g6fdwhkr");
+        ubicacion.put("g", "d2g6fdwhkr");
+        ubicacion.put("l", Arrays.asList(ubicacionConductor.getLat(), ubicacionConductor.getLon()));
         if (idConductor == null){
             ref3.child("123456").setValue(ubicacion);
         }else{
