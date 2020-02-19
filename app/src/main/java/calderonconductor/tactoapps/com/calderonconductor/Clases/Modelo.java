@@ -178,9 +178,13 @@ public class Modelo implements ComandoHistorial.OnOrdenesHistorialChangeListener
         }
 
         if (params.hasRegistroInmediato) {   //En autoline carga todo
+            if(nueva.getConductor()==uid) {
 
 
-        } else {
+            }else if(params.autoAsignarServicios){ //taxone
+                    return;
+                    }
+                            } else {
             if (nueva.ofertadaATerceros && !esTercero()) {
                 return;
             }

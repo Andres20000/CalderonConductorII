@@ -209,7 +209,7 @@ public class ListaServicios extends Activity {
                         if(modelo.params.autoAsignarServicios) {
                             ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude(),
                                     modelo.vehiculo.getPlaca(), modelo.vehiculo.ccolor, modelo.vehiculo.getMarca(), "autoAsignado",
-                                    modelo.conductor.getEstado(), "false", "Atos", modelo.getFechaHora()), modelo.uid);
+                                    modelo.conductor.getEstado(), "false","false", modelo.getFechaHora()), modelo.uid);
                         }
                         if (temDistancia > 100){
                             modelo.latitud = loc.getLatitude();
