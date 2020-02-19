@@ -74,6 +74,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Clases.Cliente;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Utility;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.ModalValorCarrera;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnCheckCancelanda;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnCheckDistancia;
@@ -103,7 +104,7 @@ import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService;
 import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService.LocalBinder;
 import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService.OnLocCambio;
 
-public class DetalleServicio extends Activity implements ComandoListadoPasajeros.OnComandoPasajerosChangeListener, ComandoCliente.OnClienteChangeListener, ComandoNotificaciones.OnNotificacionesChangeListener, ComandoOrdenesConductorTerceros.OnOrdenesConductorTercerosChangeListener, ComandoActualizarOfertaTerceros.OnActualizarOfertaTercerosChangeListener, ComandoCompartirUbicacion.OnCompartirUbicacionChangeListener, ComandoEnviarMensaje.OnMensajeChangeListener {
+public class DetalleServicio extends Activity implements ComandoListadoPasajeros.OnComandoPasajerosChangeListener, ComandoCliente.OnClienteChangeListener, ComandoNotificaciones.OnNotificacionesChangeListener, ComandoOrdenesConductorTerceros.OnOrdenesConductorTercerosChangeListener, ComandoActualizarOfertaTerceros.OnActualizarOfertaTercerosChangeListener, ComandoCompartirUbicacion.OnCompartirUbicacionChangeListener, ComandoEnviarMensaje.OnMensajeChangeListener, ModalValorCarrera.FinalizoModal {
 
     String idServicio = "";
     TextView numero_orden,text_ciudad_origen, text_ciudad_llegada,barrio_recogida,direcion_recogida, barrio_llegada;
@@ -894,6 +895,9 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
 
     }
 
+    public void agregarValorCarrera(String valorCarrera){
+        CmdOrdenes.actualizaValorCarrera(valorCarrera, orden.getId());
+    }
 
 
 
@@ -955,7 +959,7 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         }
 
         if (orden.getEstado().equals("Finalizado")) {
-            finalizarOrden();
+            new ModalValorCarrera(context,DetalleServicio.this);
             return;
         }
         if (orden.getEstado().equals("No Asignado") || orden.getEstado().equals("NoAsignado") || orden.getEstado().equals("SinConfirmar") || orden.getEstado().equals("Cotizar")) {
@@ -967,12 +971,12 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
 
 
 
-    private void finalizarOrden(){
+    private void finalizarOrden(String valorCarrera){
 
 
         Log.i("GGG", "Paso por Finalizar la orden");
 
-
+        Log.i("Orden ID", orden.getId());
         final ProgressDialog progressDialog = new ProgressDialog(DetalleServicio.this);
         progressDialog.setMessage("Procesando...");
         progressDialog.setTitle("Finalizando el servicio");
@@ -980,7 +984,7 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         progressDialog.show(); // Display Progress Dialog
         progressDialog.setCancelable(false);
 
-
+        agregarValorCarrera(valorCarrera);
         comandoCompartirUbicacion.actualizarTimeStampFinal(modelo.latitud, modelo.longitud, idServicio);
         comandoOrdenesConductor.moverOrdenAlHistorico(orden.getId(), new OnFinalizarOrden() {
             @Override
@@ -1111,8 +1115,6 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
             estado_conductor.setImageResource(R.drawable.img_finalizado_i5);
             texto_foter.setText("");
             orden.setEstado("Finalizado");
-
-
 
         } else if (orden.getEstado().equals("No Asignado") || orden.getEstado().equals("NoAsignado") || orden.getEstado().equals("SinConfirmar")) {
             imagen_estado.setImageResource(R.drawable.estado_sin_confirmar_i5);
@@ -1945,4 +1947,8 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
     }
 
 
+    @Override
+    public void ResultadoModal(String valorCarrera) {
+        finalizarOrden(valorCarrera);
+    }
 }

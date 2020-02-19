@@ -563,11 +563,28 @@ public class CmdOrdenes {
                 }
             }
         });
+    }
 
+    public static void actualizaValorCarrera(String valor, String idOrden) {
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("ordenes/pendientes/" + idOrden );//ruta path
 
+        final String valorCarrera = valor;
 
+        Map<String, Object> mapa = new HashMap<String, Object>();
+        mapa.put("valorCarrera", valor);
 
+        ref.updateChildren(mapa, new CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                if (error != null) {
+                    Log.i("Error", error.getMessage());
+                } else {
+                    Log.i("valorCarrera", valorCarrera);
+                }
+            }
+        });
     }
 
 
