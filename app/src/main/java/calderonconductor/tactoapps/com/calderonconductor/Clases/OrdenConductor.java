@@ -75,7 +75,7 @@ public class OrdenConductor {
     public boolean servicioInmediato = true;
 
     public long distanciaConduciendo  = -1;
-
+    private String valorCarrera;
 
 
     public ArrayList<CotizacionesTerceros> cotizacionesT = new ArrayList<CotizacionesTerceros>();
@@ -612,4 +612,11 @@ public class OrdenConductor {
     }
 
 
+    public String getValorCarrera() {
+        return valorCarrera;
+    }
+
+    public void setValorCarrera(String valorCarrera) {
+        this.valorCarrera = valorCarrera;
+    }
 }

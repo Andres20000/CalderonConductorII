@@ -102,7 +102,9 @@ public class CmdParams {
                 if (snap.hasChild("mostrarInfoSensible")){
                     modelo.params.mostrarInfoSensible = (boolean)snap.child("mostrarInfoSensible").getValue();
                 }
-
+                if (snap.hasChild("autoAsignarServicios")){
+                    modelo.params.autoAsignarServicios = (boolean)snap.child("autoAsignarServicios").getValue();
+                }
 
 
                 listenerP.cargoOpcionesGenerales();
