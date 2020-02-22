@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:background="">
+
+    <TextView
+        android:id="@+id/TextBox_Notif_Tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Imagen_Codigo"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/ImageView02"
+        android:layout_toStartOf="@+id/ImageView02"
+        android:gravity="center"
+        android:text="P1 1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/TextBox_Notif_Mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_below="@+id/appName"
+        android:layout_toEndOf="@+id/notifiation_image"
+        android:layout_toLeftOf="@+id/Imagen_Codigo"
+        android:layout_toRightOf="@+id/notifiation_image"
+        android:layout_toStartOf="@+id/Imagen_Codigo"
+        android:text="En este momento la sección de Mecanizado a producido un requerimiento. Llamado problemas de mantenimiento"
+        android:textColor="#001580"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/notifiation_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/img_cronometro_blanco" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/notifiation_image"
+        android:layout_toRightOf="@+id/notifiation_image"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextBox_Notif_Mensaje"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="Recibido: 11:49 p.m."
+        android:textColor="#001580"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/Imagen_Codigo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/TextBox_Notif_Mensaje"
+        android:layout_toLeftOf="@+id/TextBox_Notif_Tipo"
+        android:layout_toStartOf="@+id/TextBox_Notif_Tipo"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/img_cronometro_blanco" />
+
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="40sp"
+        android:layout_height="30sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/appName"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/img_cronometro_blanco" />
+
+    <ImageView
+        android:id="@+id/ImageView03"
+        android:layout_width="40sp"
+        android:layout_height="30sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ImageView02"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/img_cronometro_blanco" />
+
+</RelativeLayout>
