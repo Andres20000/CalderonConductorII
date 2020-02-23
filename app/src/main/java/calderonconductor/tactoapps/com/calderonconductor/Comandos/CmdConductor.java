@@ -52,12 +52,14 @@ public class CmdConductor {
         veh.put("modelo", vehi.modelo);
         veh.put("color", "Amarillo");
         veh.put("activo", true);
-        veh.put("alcance", "");
-        veh.put("cupoMaximo", "");
-        veh.put("CupoMinimo", "");
-        veh.put("disponibilidad", "");
-        veh.put("proximaRevisionTM", "");
-        veh.put("ultimaRevisionTM", "s");
+        veh.put("alcance", "Local");
+        veh.put("cupoMaximo", "4");
+        veh.put("cupoMinimo", "1");
+        veh.put("disponibilidad", true);
+        veh.put("proximaRevisionTM", "11/5/2020");
+        veh.put("ultimaRevisionTM", "11/5/2019");
+        veh.put("tipo", "Taxi Estándar");
+
 
 
 

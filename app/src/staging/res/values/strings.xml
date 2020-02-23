@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ConductorStaging</string>
+    <string name="authorities">com.tactoapps.android.fileprovider_p</string>
     
 </resources>

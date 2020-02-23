@@ -178,26 +178,30 @@ public class Modelo implements ComandoHistorial.OnOrdenesHistorialChangeListener
         }
 
         if (params.hasRegistroInmediato) {   //En autoline carga todo
-            if(nueva.getConductor()==uid) {
-
-
-            }else if(params.autoAsignarServicios){ //taxone
-                    return;
+                if (params.autoAsignarServicios) {    //TaxiOne
+                    if (nueva.getConductor() == null) {
+                        return;
                     }
-                            } else {
-            if (nueva.ofertadaATerceros && !esTercero()) {
-                return;
-            }
+                    if (!nueva.getConductor().equals(uid)){   //si no es mia, quitela
+                        return;
+                    }
 
-            if (nueva.getEstado().equals("NoAsignado")  && !esTercero()){
-                return;
-            }
+                } else {/* permitimos todos los estados en autoline*/}
+        } else {
 
-            if (nueva.getEstado().equals("NoAsignado")  && !nueva.ofertadaATerceros ){
-                return;
-            }
+                if (nueva.ofertadaATerceros && !esTercero()) {
+                    return;
+                }
 
-        }
+                if (nueva.getEstado().equals("NoAsignado")  && !esTercero()){
+                    return;
+                }
+
+                if (nueva.getEstado().equals("NoAsignado")  && !nueva.ofertadaATerceros ){
+                    return;
+                }
+
+            }
 
         if ( params.ocultarAsignacionTerceros && esTercero()){      //premium o integral!!! un de las dos
             if (!nueva.estaEnRangoDeMostrarATerceros(params.ocultarAsignacionTercerosMinutos)){

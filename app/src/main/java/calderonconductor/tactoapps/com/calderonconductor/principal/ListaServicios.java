@@ -118,7 +118,6 @@ public class ListaServicios extends Activity {
 
 
         if (modelo.tipoConductor.equals("conductor")) {
-
             comandoConductor.actualizarInicioSesion(modelo.uid,this,"conductores");
         }else{
             comandoConductor.actualizarInicioSesion(modelo.uid,this,"conductoresTerceros");
@@ -135,9 +134,15 @@ public class ListaServicios extends Activity {
                 if (!modelo.ocupado) {
                     if (modelo.params.hasRegistroInmediato) {
                         ordenc = modelo.getOrdenesOrdenadasParaAutoline().get(position);
+                    }else {
+                        ordenc = modelo.getOrdenes().get(position);
                     }
                 } else {
-                    ordenc = modelo.getOrdenesSoloMias().get(position);
+                    if (modelo.params.hasRegistroInmediato) {
+                        ordenc = modelo.getOrdenesSoloMias().get(position);
+                    }else {
+                        ordenc = modelo.getOrdenes().get(position);
+                    }
                 }
 
                 if (ordenc.getEstado().equals("Cancelado")){
@@ -189,9 +194,6 @@ public class ListaServicios extends Activity {
             btn_disponible.setVisibility(View.GONE);
             modelo.ocupado = false;
         }
-
-
-
 
 
         mLocationCallback = new LocationCallback() {
@@ -471,6 +473,7 @@ public class ListaServicios extends Activity {
         mAdapter.notifyDataSetChanged();
 
     }
+
 
 
 

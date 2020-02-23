@@ -99,7 +99,7 @@ public class CmdOrdenes {
 
         modelo = Modelo.getInstance();
 
-        DatabaseReference ref = database.getReference("ordenes/pendientes/");
+        DatabaseReference ref = database.getReference("ordenes/pendientes");
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot snap, String s) {
@@ -234,7 +234,14 @@ public class CmdOrdenes {
 
         nuevaOrden.setOrigen(snap.child("origen").getValue().toString());
         nuevaOrden.setEstado(snap.child("estado").getValue().toString());
-        nuevaOrden.setDestino(snap.child("destino").getValue().toString());
+
+        if (snap.hasChild("destino")) {
+            nuevaOrden.setDestino(snap.child("destino").getValue().toString());
+        }else {
+            nuevaOrden.setDestino(snap.child("origen").getValue().toString());
+        }
+
+
 
         if (snap.hasChild("precioHora")) {
             nuevaOrden.precioHora = Integer.parseInt(snap.child("precioHora").getValue().toString());
