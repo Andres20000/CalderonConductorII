@@ -1,17 +1,24 @@
 package calderonconductor.tactoapps.com.calderonconductor;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -39,6 +46,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdParams.onGe
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConductor.OnConductorListener;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoValidarUsuario;
+import calderonconductor.tactoapps.com.calderonconductor.Notificaciones.Notificacion;
 import calderonconductor.tactoapps.com.calderonconductor.registroDos.RegistroDos;
 
 public class MainActivity extends Activity implements ComandoValidarUsuario.OnValidarUsuarioChangeListener {
@@ -54,12 +62,44 @@ public class MainActivity extends Activity implements ComandoValidarUsuario.OnVa
     private ProgressDialog progressDialog;
     ComandoValidarUsuario comandoValidarUsuario;
 
+
+    protected boolean shouldAskPermissions() {
+        return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
+        int permissionNotifications = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_NOTIFICATION_POLICY);
+
+        if (permissionNotifications != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions(
+                    MainActivity.this,
+                    new String[] { Manifest.permission.ACCESS_NOTIFICATION_POLICY }
+                    ,225
+            );
+        }
+
+        if (shouldAskPermissions()) {
+            NotificationManager n = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if(n.isNotificationPolicyAccessGranted()) {
+                    //AudioManager audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+                    //audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+
+
+                }else{
+                    // Ask the user to grant access
+                    Intent intent = new Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+                    startActivity(intent);
+                }
+            }
+        }
 
 
         if (modelo.params.diseñoRegistroTax1){

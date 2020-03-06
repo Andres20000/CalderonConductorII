@@ -694,7 +694,7 @@ public class ComandoOrdenesConductorTerceros {
                 if (currentData.getValue() != null) {
                     String idconductor = currentData.getValue().toString();
 
-                    if (!idconductor.equals("")) {
+                    if (idconductor.equals("")) {
                         Log.v("SolicitudAsiganda", "Solicitud ya asignada. " + idOrden);
 
                         return Transaction.abort();

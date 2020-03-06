@@ -81,6 +81,7 @@ public class OrdenConductor {
     public ArrayList<CotizacionesTerceros> cotizacionesT = new ArrayList<CotizacionesTerceros>();
 
 
+    public ArrayList<Rechazo> rechazos = new ArrayList<Rechazo>();
 
 
     public  OrdenConductor(String key){
@@ -335,6 +336,14 @@ public class OrdenConductor {
 
     public void setHorasServicio(String horasServicio) {
         this.horasServicio = horasServicio;
+    }
+
+    public ArrayList<Rechazo> getRechazos() {
+        return rechazos;
+    }
+
+    public void setRechazos(ArrayList<Rechazo> rechazos) {
+        this.rechazos = rechazos;
     }
 
     //metodo para mostrar una sola  orden segun el id de la orden

@@ -2,6 +2,7 @@ package calderonconductor.tactoapps.com.calderonconductor.principal;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,10 +12,13 @@ import android.graphics.Color;
 import android.location.Location;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -44,10 +48,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
 
 import calderonconductor.tactoapps.com.calderonconductor.Adapter.OrdenesConductorAdapter;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.Globales;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.Rechazo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.UbicacionConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnOrdenesDescargaListener;
@@ -57,6 +65,9 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConduct
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor.OnFinalizarOrden;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoUbicacionConductor;
+import calderonconductor.tactoapps.com.calderonconductor.Notificaciones.Notificacion;
+import calderonconductor.tactoapps.com.calderonconductor.Notificaciones.Servicio;
+import calderonconductor.tactoapps.com.calderonconductor.Notificaciones.vista_nuevo_servicio;
 import calderonconductor.tactoapps.com.calderonconductor.R;
 import calderonconductor.tactoapps.com.calderonconductor.particular.ListaServiciosParticularAdapter;
 import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService;
@@ -84,12 +95,18 @@ public class ListaServicios extends Activity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     private MediaPlayer mediaPlayer = new MediaPlayer();
 
+    int Codigo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_servicios);
+
+        final Window win= getWindow();
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
 
         lv = (ListView) findViewById(R.id.listView1);
         sindatos = (TextView) findViewById(R.id.sindatos);
@@ -209,9 +226,7 @@ public class ListaServicios extends Activity {
                         float temDistancia = loc.distanceTo(modelo.cLoc);
                         Log.i("LOCATION","Nueva Distancia ===== " + temDistancia);
                         if(modelo.params.autoAsignarServicios) {
-                            ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude(),
-                                    modelo.vehiculo.getPlaca(), modelo.vehiculo.ccolor, modelo.vehiculo.getMarca(), "autoAsignado",
-                                    modelo.conductor.getEstado(), "false","false", modelo.getFechaHora()), modelo.uid);
+                            ComandoUbicacionConductor.ActualizaUbicacionConductor(new UbicacionConductor(loc.getLatitude(), loc.getLongitude()), modelo.uid);
                         }
                         if (temDistancia > 100){
                             modelo.latitud = loc.getLatitude();
@@ -381,6 +396,7 @@ public class ListaServicios extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+        cambiodetectado = false;
         ordenarPintar();
 
     }
@@ -403,12 +419,14 @@ public class ListaServicios extends Activity {
             @Override
             public void nueva() {
                 modelo.updateLastLocation(modelo.cLoc);
-                ordenarPintar();
+                cambiodetectado = true;
+
             }
 
             @Override
             public void modificada(String idServicio) {
                 modelo.updateLastLocation(modelo.cLoc);
+                cambiodetectado = true;
                 ordenarPintar();
                 trySound(idServicio);
 
@@ -416,12 +434,27 @@ public class ListaServicios extends Activity {
 
             @Override
             public void eliminada() {
+
+                QuitarVentana();
                 ordenarPintar();
             }
         });
 
 
     }
+
+    private OrdenConductor orden_temporal;
+
+    private void QuitarVentana(){
+        if(orden_temporal != null){
+            NotificationManager nMgr = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            nMgr.cancel(Codigo);
+            Globales.ventana_nuevo_servicio.finish();
+        }
+
+    }
+
+
 
 
     private void trySound(String idOrden){
@@ -448,6 +481,7 @@ public class ListaServicios extends Activity {
     }
 
 
+    boolean cambiodetectado = false;
 
     private void ordenarPintar(){
 
@@ -457,7 +491,79 @@ public class ListaServicios extends Activity {
             if (modelo.params.hasRegistroInmediato) {
                 if (modelo.getOrdenesOrdenadasParaAutoline().size() > 0){
                     tituloAsigandos.setVisibility(View.VISIBLE);
+
                 }else {
+
+
+
+                    if(cambiodetectado == true){
+                        if(modelo.getOrdenes().size() > 0){
+                            ArrayList<OrdenConductor> lista_orden = modelo.getOrdenes();
+
+                            for(OrdenConductor ord_tmp : lista_orden){
+                                boolean id_conductor_encontrado = false;
+                                for(Rechazo tmp : ord_tmp.getRechazos()){
+                                    if(tmp.getId().equals(modelo.uid)){
+                                        id_conductor_encontrado = true;
+
+                                    }
+                                }
+
+                                if(orden_temporal != null){
+                                    if(orden_temporal.getEstado() == ord_tmp.getEstado()){
+                                        id_conductor_encontrado = true;
+                                    }
+                                }
+
+
+                                if(id_conductor_encontrado == false){
+
+                                    if(ord_tmp.getEstado().equals("PreAsignado")){
+
+                                        orden_temporal = new OrdenConductor();
+                                        orden_temporal = ord_tmp;
+
+                                        final int idaleatorio = new Random().nextInt((10000 - 10) + 1) + 10;
+                                        Codigo = idaleatorio;
+                                        Notificacion not_1 = new Notificacion();
+                                        not_1.Notificacion(
+                                                this,
+                                                "Nuevo Servicio",
+                                                ord_tmp.getDestino() + " " + ord_tmp.getDireccionDestino(),
+                                                "",
+                                                idaleatorio,
+                                                1,
+                                                false,
+                                                false);
+
+                                        //not_1.Notificacion(this,);
+
+                                        @SuppressLint("InvalidWakeLockTag")
+                                        PowerManager.WakeLock screenLock =    ((PowerManager)getSystemService(POWER_SERVICE)).newWakeLock(
+                                                PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
+                                        screenLock.acquire();
+                                        screenLock.release();
+
+                                        Intent alarmIntent = new Intent("android.intent.action.MAIN");
+                                        alarmIntent.putExtra("id",ord_tmp.getId());
+                                        alarmIntent.putExtra("conductor",modelo.uid);
+
+                                        alarmIntent.setClass(ListaServicios.this, vista_nuevo_servicio.class);
+                                        alarmIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        final Window win= getWindow();
+                                        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+                                        win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+                                        ListaServicios.this.startActivity(alarmIntent);
+                                    }
+                                }
+                            }
+
+
+                        }
+
+
+                    }
+
                     tituloAsigandos.setVisibility(View.GONE);
                 }
                 ((ListaServiciosParticularAdapter) mAdapter).updateOrdenes(modelo.getOrdenesOrdenadasParaAutoline());

@@ -36,7 +36,7 @@ android {
 
         //NOTA: los key de AutoLine quedaron cruzados
         staging {
-            //initWith debug
+            initWith debug
                 applicationIdSuffix ".staging"
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->

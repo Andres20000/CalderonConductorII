@@ -24,6 +24,7 @@ import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Municipio;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Pasajero;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.Rechazo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Retraso;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Ubicacion;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Utility;
@@ -363,6 +364,19 @@ public class CmdOrdenes {
             newPasajero.setTipo(pasajero.getValue().toString());
             nuevaOrden.pasajeros.add(newPasajero);//
         }
+
+
+
+        //nuevo arbol
+        DataSnapshot snapRechazos;
+        snapRechazos = (DataSnapshot) snap.child("rechazos");
+        for (DataSnapshot rechazo : snapRechazos.getChildren()) {
+            Rechazo newPasajero = new Rechazo();
+            newPasajero.setId(rechazo.getKey());
+            newPasajero.setTipo((Boolean) rechazo.getValue());
+            nuevaOrden.rechazos.add(newPasajero);//
+        }
+
 
 
 

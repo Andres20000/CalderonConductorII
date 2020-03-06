@@ -27,6 +27,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -221,6 +222,13 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         super.onCreate(savedInstanceState);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        final Window win= getWindow();
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+
+
         setContentView(R.layout.activity_informacion_servicio);
 
 
@@ -319,6 +327,30 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         cron = findViewById(R.id.cron);
         espacioRetra = findViewById(R.id.espacioRetra);
 
+
+        String conductor_seleccionado = "";
+        try {
+            bundle = getIntent().getExtras();
+
+            conductor_seleccionado = bundle.getString("conductor");
+
+            if(conductor_seleccionado != null){
+                if(!conductor_seleccionado.equals("")){
+                    orden = modelo.getOrden(idServicio);
+                    if (orden != null && orden.getEstado().equals("PreAsignado")){
+                        comandoOrdenesConductorTerceros.asignarTrayectoSeguro(idServicio, modelo.uid);
+                        return;
+                    }
+                    showAlerDisponivilidadTemporal();
+                }
+            }
+
+
+        } catch (Exception e) {
+            Intent i = new Intent(getApplicationContext(), Splash.class);
+            startActivity(i);
+            finish();
+        }
 
         preciocotizar.addTextChangedListener(new TextWatcher() {
             @Override

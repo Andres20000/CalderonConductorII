@@ -16,6 +16,11 @@ public class UbicacionConductor {
 
     }
 
+    public UbicacionConductor(double lat, double lon){
+        this.setLat(lat);
+        this.setLon(lon);
+    }
+
     public UbicacionConductor(double lat, double lon, String Matricula, String Color, String Marca, String AsignadaPor, String Estado, String  OfertadaATerceros, String Referencia, String FechaHora){
         this.setLat(lat);
         this.setLon(lon);
