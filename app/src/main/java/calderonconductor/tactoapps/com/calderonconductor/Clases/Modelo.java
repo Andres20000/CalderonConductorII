@@ -178,7 +178,7 @@ public class Modelo implements ComandoHistorial.OnOrdenesHistorialChangeListener
         }
 
         if (params.hasRegistroInmediato) {   //En autoline carga todo
-                if (params.autoAsignarServicios) {    //TaxiOne
+                if (params.autoAsignarServicios) {    //TaxOne
                     if (nueva.getConductor() == null) {
                         return;
                     }
