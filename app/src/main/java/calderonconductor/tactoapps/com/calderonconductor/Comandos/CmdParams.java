@@ -106,6 +106,13 @@ public class CmdParams {
                     modelo.params.autoAsignarServicios = (boolean)snap.child("autoAsignarServicios").getValue();
                 }
 
+                if (snap.hasChild("tiempoEsperaPreAsignadoConductorEnSegundos")){
+                    modelo.params.tiempoEsperaPreAsignadoConductorEnSegundos = (long)snap.child("tiempoEsperaPreAsignadoConductorEnSegundos").getValue();
+                }
+
+
+
+
 
                 listenerP.cargoOpcionesGenerales();
 

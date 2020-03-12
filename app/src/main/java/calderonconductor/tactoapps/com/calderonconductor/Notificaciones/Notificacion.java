@@ -23,9 +23,10 @@ import calderonconductor.tactoapps.com.calderonconductor.R;
 
 public class Notificacion {
     private NotificationManager notifManager;
+    private Context actividad;
+    private void ActivarSonido(){
 
-    private void ActivarSonido(Context activity){
-        AudioManager audioManager = (AudioManager) activity.getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        AudioManager audioManager = (AudioManager) actividad.getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ){
             audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
@@ -34,7 +35,7 @@ public class Notificacion {
             int origionalVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
 
-            MediaPlayer mp = MediaPlayer.create(activity, R.raw.pyxis);
+            MediaPlayer mp = MediaPlayer.create(actividad, R.raw.pyxis);
             mp.setLooping(false);
             // mp = MediaPlayer.create(getApplicationContext(), notification1);
             count=10*.01f;
@@ -42,10 +43,10 @@ public class Notificacion {
             mp.start();
             sleep(3000);
             count=10*.01f;
-            mp = MediaPlayer.create(activity, R.raw.pyxis);
+            mp = MediaPlayer.create(actividad, R.raw.pyxis);
             mp.start();
             sleep(3000);
-            mp = MediaPlayer.create(activity, R.raw.pyxis);
+            mp = MediaPlayer.create(actividad, R.raw.pyxis);
             mp.start();
         } else {
             audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
@@ -67,7 +68,7 @@ public class Notificacion {
             //audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_PLAY_SOUND);
 
             float count = 0;
-            MediaPlayer mp = MediaPlayer.create(activity, R.raw.pyxis1);
+            MediaPlayer mp = MediaPlayer.create(actividad, R.raw.pyxis1);
             mp.setLooping(false);
             // mp = MediaPlayer.create(getApplicationContext(), notification1);
             count=10*.01f;
@@ -82,9 +83,10 @@ public class Notificacion {
 
     public void Notificacion(Context activity, String titulo, String mensaje, String estado, int id, int codigo, boolean notificacion_servicio, boolean subirvolumen){
         RemoteViews notificationView = null;
+        actividad = activity;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ){
-            notificationView = new RemoteViews(activity.getPackageName(), R.layout.notificacion);
+            notificationView = new RemoteViews(actividad.getPackageName(), R.layout.notificacion);
 
             notificationView.setTextViewText(R.id.TextBox_Notif_Mensaje, mensaje);
             notificationView.setTextViewText(R.id.TextBox_Notif_Titulo, titulo);
@@ -105,20 +107,20 @@ public class Notificacion {
             }
 
         } else {
-            notificationView = new RemoteViews(activity.getPackageName(), R.layout.notificacion_a5_normal);
+            notificationView = new RemoteViews(actividad.getPackageName(), R.layout.notificacion_a5_normal);
 
             switch(codigo){
                 case 1:
-                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_rojo);
+                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.brojo);
                     break;
                 case 2:
-                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_amarillo);
+                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bamarillo);
                     break;
                 case 3:
-                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_azul);
+                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bazul);
                     break;
                 case 4:
-                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_blanco);
+                    notificationView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bblanco);
                     break;
             }
 
@@ -127,15 +129,15 @@ public class Notificacion {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && Build.VERSION.SDK_INT <= Build.VERSION_CODES.N_MR1 ){
             String ns = Context.NOTIFICATION_SERVICE;
-            NotificationManager notificationManager = (NotificationManager) activity.getSystemService(ns);
-            NotificationCompat.Builder notification1 = new NotificationCompat.Builder(activity)
+            NotificationManager notificationManager = (NotificationManager) actividad.getSystemService(ns);
+            NotificationCompat.Builder notification1 = new NotificationCompat.Builder(actividad)
                     .setContentTitle(titulo)
                     .setSmallIcon(R.mipmap.ic_launcher);
 
             Notification notification = new Notification(R.mipmap.ic_launcher,  "Servicio", System.currentTimeMillis());
 
-            Intent notificationIntent = new Intent(activity, MainActivity.class);
-            PendingIntent pendingNotificationIntent = PendingIntent.getActivity(activity, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            Intent notificationIntent = new Intent(actividad, MainActivity.class);
+            PendingIntent pendingNotificationIntent = PendingIntent.getActivity(actividad, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             if (notificacion_servicio == true){
                 notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
@@ -155,7 +157,21 @@ public class Notificacion {
             notificationManager.notify(id, notification);
 
             if(subirvolumen == true){
-                ActivarSonido(activity);
+
+                Thread thread = new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            sleep(1000);
+                            ActivarSonido();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                thread.start();
+
             }
 
 
@@ -167,7 +183,7 @@ public class Notificacion {
                 PendingIntent pendingIntent;
                 NotificationCompat.Builder builder;
                 if (notifManager == null) {
-                    notifManager = (NotificationManager)activity.getSystemService(Context.NOTIFICATION_SERVICE);
+                    notifManager = (NotificationManager)actividad.getSystemService(Context.NOTIFICATION_SERVICE);
                 }
                 int importance = NotificationManager.IMPORTANCE_HIGH;
                 NotificationChannel mChannel = notifManager.getNotificationChannel(String.valueOf(id));
@@ -177,18 +193,18 @@ public class Notificacion {
                     mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
                     notifManager.createNotificationChannel(mChannel);
                 }
-                builder = new NotificationCompat.Builder(activity, String.valueOf(id));
-                intent = new Intent(activity, MainActivity.class);
+                builder = new NotificationCompat.Builder(actividad, String.valueOf(id));
+                intent = new Intent(actividad, MainActivity.class);
 
                 if (notificacion_servicio == true){
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 }
 
 
-                pendingIntent = PendingIntent.getActivity(activity, 0, intent, 0);
+                pendingIntent = PendingIntent.getActivity(actividad, 0, intent, 0);
                 builder.setContentTitle(titulo)                            // required
                         .setSmallIcon(R.mipmap.ic_launcher)   // required
-                        .setContentText(activity.getString(R.string.app_name)) // required
+                        .setContentText(actividad.getString(R.string.app_name)) // required
                         .setDefaults(Notification.DEFAULT_ALL)
                         .setAutoCancel(true)
                         .setContentIntent(pendingIntent)
@@ -208,20 +224,33 @@ public class Notificacion {
                 notifManager.notify(id, notification);
 
                 if(subirvolumen == true){
-                    ActivarSonido(activity);
+
+                    Thread thread = new Thread() {
+                        @Override
+                        public void run() {
+                            try {
+                                sleep(1000);
+                                ActivarSonido();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+
+                    thread.start();
                 }
 
             } else {
 
                 String ns = Context.NOTIFICATION_SERVICE;
-                NotificationManager notificationManager = (NotificationManager) activity.getSystemService(ns);
+                NotificationManager notificationManager = (NotificationManager) actividad.getSystemService(ns);
 
                 Notification notification = new Notification(R.mipmap.ic_launcher,  "Servicio", System.currentTimeMillis());
 
-                Intent notificationIntent = new Intent(activity, MainActivity.class);
-                PendingIntent pendingNotificationIntent = PendingIntent.getActivity(activity, 0, notificationIntent, 0);
+                Intent notificationIntent = new Intent(actividad, MainActivity.class);
+                PendingIntent pendingNotificationIntent = PendingIntent.getActivity(actividad, 0, notificationIntent, 0);
                 Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                RemoteViews bigView = new RemoteViews(activity.getApplicationContext().getPackageName(),
+                RemoteViews bigView = new RemoteViews(actividad.getApplicationContext().getPackageName(),
                         R.layout.notificacion_a5);
 
                 bigView.setTextViewText(R.id.TextBox_Notif_Mensaje, mensaje);
@@ -229,16 +258,16 @@ public class Notificacion {
                 bigView.setTextViewText(R.id.TextBox_Notif_Tipo, estado);
                 switch(codigo){
                     case 1:
-                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_rojo);
+                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.brojo);
                         break;
                     case 2:
-                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_amarillo);
+                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bamarillo);
                         break;
                     case 3:
-                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_azul);
+                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bazul);
                         break;
                     case 4:
-                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.drawable.circulo_blanco);
+                        bigView.setImageViewResource(R.id.Imagen_Codigo, R.mipmap.bblanco);
                         break;
                 }
 
@@ -258,7 +287,20 @@ public class Notificacion {
 
 
                 if(subirvolumen == true){
-                    ActivarSonido(activity);
+
+                    Thread thread = new Thread() {
+                        @Override
+                        public void run() {
+                            try {
+                                sleep(1000);
+                                ActivarSonido();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+
+                    thread.start();
                 }
 
 

@@ -328,30 +328,6 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         espacioRetra = findViewById(R.id.espacioRetra);
 
 
-        String conductor_seleccionado = "";
-        try {
-            bundle = getIntent().getExtras();
-
-            conductor_seleccionado = bundle.getString("conductor");
-
-            if(conductor_seleccionado != null){
-                if(!conductor_seleccionado.equals("")){
-                    orden = modelo.getOrden(idServicio);
-                    if (orden != null && orden.getEstado().equals("PreAsignado")){
-                        comandoOrdenesConductorTerceros.asignarTrayectoSeguro(idServicio, modelo.uid);
-                        return;
-                    }
-                    showAlerDisponivilidadTemporal();
-                }
-            }
-
-
-        } catch (Exception e) {
-            Intent i = new Intent(getApplicationContext(), Splash.class);
-            startActivity(i);
-            finish();
-        }
-
         preciocotizar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -492,6 +468,32 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
 
             ;
         };
+
+
+
+        String conductor_seleccionado = "";
+        try {
+            bundle = getIntent().getExtras();
+
+            conductor_seleccionado = bundle.getString("conductor");
+
+            if(conductor_seleccionado != null){
+                if(!conductor_seleccionado.equals("")){
+                    orden = modelo.getOrden(idServicio);
+                    if (orden != null && orden.getEstado().equals("PreAsignado")){
+                        comandoOrdenesConductorTerceros.asignarTrayectoSeguro(idServicio, modelo.uid);
+                        return;
+                    }
+                    showAlerDisponivilidadTemporal();
+                }
+            }
+
+
+        } catch (Exception e) {
+            Intent i = new Intent(getApplicationContext(), Splash.class);
+            startActivity(i);
+            finish();
+        }
 
 
 

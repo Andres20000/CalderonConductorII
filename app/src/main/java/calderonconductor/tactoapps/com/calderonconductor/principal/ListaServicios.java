@@ -449,6 +449,8 @@ public class ListaServicios extends Activity {
         if(orden_temporal != null){
             NotificationManager nMgr = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             nMgr.cancel(Codigo);
+
+            Globales.ventana_nuevo_servicio.rechazoautomatico = false;
             Globales.ventana_nuevo_servicio.finish();
         }
 
@@ -523,18 +525,9 @@ public class ListaServicios extends Activity {
                                         orden_temporal = new OrdenConductor();
                                         orden_temporal = ord_tmp;
 
+
                                         final int idaleatorio = new Random().nextInt((10000 - 10) + 1) + 10;
                                         Codigo = idaleatorio;
-                                        Notificacion not_1 = new Notificacion();
-                                        not_1.Notificacion(
-                                                this,
-                                                "Nuevo Servicio",
-                                                ord_tmp.getDestino() + " " + ord_tmp.getDireccionDestino(),
-                                                "",
-                                                idaleatorio,
-                                                1,
-                                                false,
-                                                false);
 
                                         //not_1.Notificacion(this,);
 
@@ -547,6 +540,7 @@ public class ListaServicios extends Activity {
                                         Intent alarmIntent = new Intent("android.intent.action.MAIN");
                                         alarmIntent.putExtra("id",ord_tmp.getId());
                                         alarmIntent.putExtra("conductor",modelo.uid);
+                                        alarmIntent.putExtra("codigonotificacion",Codigo);
 
                                         alarmIntent.setClass(ListaServicios.this, vista_nuevo_servicio.class);
                                         alarmIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -554,6 +548,22 @@ public class ListaServicios extends Activity {
                                         win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
                                         win.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
                                         ListaServicios.this.startActivity(alarmIntent);
+
+
+
+
+
+                                        Notificacion not_1 = new Notificacion();
+                                        not_1.Notificacion(
+                                                this,
+                                                "Nuevo Servicio",
+                                                ord_tmp.getDestino() + " " + ord_tmp.getDireccionDestino(),
+                                                "",
+                                                idaleatorio,
+                                                1,
+                                                false,
+                                                true);
+
                                     }
                                 }
                             }

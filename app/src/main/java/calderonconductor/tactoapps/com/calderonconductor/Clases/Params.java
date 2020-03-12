@@ -34,4 +34,6 @@ public class Params {
     public  boolean mostrarInfoSensible = false;
     public  boolean autoAsignarServicios = false;
 
+    public long tiempoEsperaPreAsignadoConductorEnSegundos = 0;
+
 }
