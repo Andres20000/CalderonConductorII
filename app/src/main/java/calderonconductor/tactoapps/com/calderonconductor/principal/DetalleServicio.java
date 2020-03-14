@@ -420,7 +420,6 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
         actualizarDatos();
 
 
-
         cliente.getRazonSocialCliente(orden.getIdCliente(), idServicio);
 
         String commaSeparated = orden.getRuta();
@@ -492,7 +491,6 @@ public class DetalleServicio extends Activity implements ComandoListadoPasajeros
 
             ;
         };
-
 
 
     }
