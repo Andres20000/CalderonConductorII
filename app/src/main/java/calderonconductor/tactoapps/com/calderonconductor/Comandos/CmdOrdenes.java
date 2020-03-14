@@ -223,7 +223,7 @@ public class CmdOrdenes {
     private static OrdenConductor readDatosOrdennesConductor(DataSnapshot snap) {
 
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-
+        Modelo modelo = Modelo.getInstance();
 
         OrdenConductor nuevaOrden = new OrdenConductor(snap.getKey());
 
@@ -271,7 +271,7 @@ public class CmdOrdenes {
 
 
 
-        if (snap.child("destino").getValue().toString().equals("ABIERTO")) {
+        if (snap.hasChild("destino") && snap.child("destino").getValue().toString().equals("ABIERTO")) {
             nuevaOrden.setDiasServicio(snap.child("diasServicio").getValue().toString());
             nuevaOrden.setHorasServicio(snap.child("horasServicio").getValue().toString());
         }
@@ -358,6 +358,12 @@ public class CmdOrdenes {
         }
 
 
+        DataSnapshot snapRechazados = snap.child("rechazados");
+        for (DataSnapshot rechazo : snapRechazados.getChildren()) {
+            if (rechazo.getKey().equals(modelo.uid)){
+                nuevaOrden.yaRechazada = true;
+            }
+        }
 
         DataSnapshot snapRetrasos = (DataSnapshot) snap.child("retrasos");
 
@@ -563,11 +569,28 @@ public class CmdOrdenes {
                 }
             }
         });
+    }
 
+    public static void actualizaValorCarrera(String valor, String idOrden) {
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("ordenes/pendientes/" + idOrden );//ruta path
 
+        final String valorCarrera = valor;
 
+        Map<String, Object> mapa = new HashMap<String, Object>();
+        mapa.put("valorCarrera", valor);
 
+        ref.updateChildren(mapa, new CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                if (error != null) {
+                    Log.i("Error", error.getMessage());
+                } else {
+                    Log.i("valorCarrera", valorCarrera);
+                }
+            }
+        });
     }
 
 

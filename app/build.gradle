@@ -8,8 +8,8 @@ android {
         applicationId "calderonconductor.tactoapps.com.calderonconductor"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 85
-        versionName "1.85"
+        versionCode 97
+        versionName "1.97"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -18,9 +18,9 @@ android {
         javaMaxHeapSize "4g"
     }
     buildTypes {
-        release {         //la llave quedó invertida para autoline
-            //initWith debug
+        release {         //la llave quedó invertida para autolineinitWith debug
             minifyEnabled false
+            //initWith debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
@@ -38,7 +38,7 @@ android {
         //NOTA: los key de AutoLine quedaron cruzados
         staging {
             initWith debug
-            applicationIdSuffix ".staging"
+                applicationIdSuffix ".staging"
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     if (outputFile != null && outputFile.name.endsWith('conductorStaging.apk')) {

@@ -48,6 +48,7 @@ import java.io.IOException;
 import calderonconductor.tactoapps.com.calderonconductor.Adapter.OrdenesConductorAdapter;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.Modelo;
 import calderonconductor.tactoapps.com.calderonconductor.Clases.OrdenConductor;
+import calderonconductor.tactoapps.com.calderonconductor.Clases.UbicacionConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnOrdenesDescargaListener;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.CmdOrdenes.OnOrdenesListener;
@@ -55,8 +56,10 @@ import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConduct
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoConductor.OnTerceroEstadoListener;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor;
 import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoOrdenesConductor.OnFinalizarOrden;
+import calderonconductor.tactoapps.com.calderonconductor.Comandos.ComandoUbicacionConductor;
 import calderonconductor.tactoapps.com.calderonconductor.R;
 import calderonconductor.tactoapps.com.calderonconductor.particular.ListaServiciosParticularAdapter;
+import calderonconductor.tactoapps.com.calderonconductor.servicios.LocService;
 
 public class ListaServicios extends Activity {
 
@@ -97,6 +100,8 @@ public class ListaServicios extends Activity {
         btn_disponible = (Button) findViewById(R.id.btn_disponible);
 
 
+        if(modelo.params.autoAsignarServicios)
+            startLocationUpdates();
 
         if (modelo.params.hasRegistroInmediato) {  //modo Uber
             mAdapter = new ListaServiciosParticularAdapter(this,  modelo.getOrdenes());
@@ -130,9 +135,15 @@ public class ListaServicios extends Activity {
                 if (!modelo.ocupado) {
                     if (modelo.params.hasRegistroInmediato) {
                         ordenc = modelo.getOrdenesOrdenadasParaAutoline().get(position);
+                    }else {
+                        ordenc = modelo.getOrdenes().get(position);
                     }
                 } else {
-                    ordenc = modelo.getOrdenesSoloMias().get(position);
+                    if (modelo.params.hasRegistroInmediato) {
+                        ordenc = modelo.getOrdenesSoloMias().get(position);
+                    }else {
+                        ordenc = modelo.getOrdenes().get(position);
+                    }
                 }
 
                 if (ordenc.getEstado().equals("Cancelado")){
@@ -463,6 +474,7 @@ public class ListaServicios extends Activity {
         mAdapter.notifyDataSetChanged();
 
     }
+
 
 
 

@@ -178,8 +178,15 @@ public class Modelo implements ComandoHistorial.OnOrdenesHistorialChangeListener
         }
 
         if (params.hasRegistroInmediato) {   //En autoline carga todo
+                if (params.autoAsignarServicios) {    //TaxOne
+                    if (nueva.getConductor() == null) {
+                        return;
+                    }
+                    if (!nueva.getConductor().equals(uid)){   //si no es mia, quitela
+                        return;
+                    }
 
-
+                } else {/* permitimos todos los estados en autoline*/}
         } else {
             if (nueva.ofertadaATerceros && !esTercero()) {
                 return;
