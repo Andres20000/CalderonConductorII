@@ -8,8 +8,8 @@ android {
         applicationId "calderonconductor.tactoapps.com.calderonconductor"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 97
-        versionName "1.97"
+        versionCode 98
+        versionName "1.98"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -19,7 +19,7 @@ android {
     }
     buildTypes {
         release {         //la llave quedó invertida para autoline
-            //initWith debug
+            initWith debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             applicationVariants.all { variant ->
