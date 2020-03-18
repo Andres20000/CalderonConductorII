@@ -13,7 +13,7 @@
                       <PersistentState>
                         <option name="values">
                           <map>
-                            <entry key="resourceDirectory" value="taxispastoRelease" />
+                            <entry key="resourceDirectory" value="taxoneRelease" />
                           </map>
                         </option>
                       </PersistentState>
@@ -62,7 +62,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="59" />
+                                                <entry key="scalingPercent" value="95" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -72,8 +72,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="$USER_HOME$/Downloads/Conductor 2/android_v8/mask.png" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/AppIcon.appiconset/Icon-1024.png" />
+                                      <entry key="backgroundImage" value="$USER_HOME$/Downloads/T1/Conductor/android_v8/mask.png" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/T1/Conductor/android_v8/input.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
