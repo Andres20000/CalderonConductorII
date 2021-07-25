@@ -8,15 +8,23 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/adapter_lista_detalla_servicios.xml" value="0.20697463768115942" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/vista_lista_chequeo.xml" value="0.21927083333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_compra.xml" value="1.0" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/layout/item_switch.xml" value="0.2246376811594203" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/EspiroAPP/libreria_espiroapp/src/main/res/layout/vista_terminos_condiciones.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/PruebaImagenes/app/src/main/res/layout/fragment_principal.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/cajatexto_gris_conborde.xml" value="0.1" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/cajatexto_gris_redondos.xml" value="0.3807291666666667" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/listview_buscador.xml" value="0.3807291666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/rectangulo_blanco_generico.xml" value="0.1" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/itemview_buscador.xml" value="0.365625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/listview_buscador.xml" value="0.1" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/spinner_generico.xml" value="0.365625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/calderonRelease/res/drawable/bordestyleeditext.xml" value="0.3807291666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_confirmar_servicio.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_lista_ciudad_origen_destino.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_servicios.xml" value="0.18020833333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_servicios_new.xml" value="0.2508038585209003" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_ubicacion_conductor.xml" value="0.18020833333333333" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/main_list.xml" value="0.365625" />
       </map>
     </option>
   </component>
