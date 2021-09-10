@@ -2,12 +2,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/drawable/ic_conductor_novedad.xml" value="0.22239583333333332" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_informacion_servicio.xml" value="0.20833333333333334" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_lista_pasajeros.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_lista_retrasos.xml" value="0.16822916666666668" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_lista_servicios.xml" value="0.365625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_tap_3.xml" value="0.21197916666666666" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/adapter_destino_adicional.xml" value="0.12409420289855072" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/adapter_lista_detalla_servicios.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/item_lista_particular.xml" value="0.21197916666666666" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/notificacion.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/vista_lista_chequeo.xml" value="0.21927083333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_compra.xml" value="1.0" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_productor/src/main/res/layout/vista_ventas.xml" value="0.21422101449275363" />
