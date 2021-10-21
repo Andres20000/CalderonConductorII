@@ -37,6 +37,7 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_confirmar_servicio.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_lista_ciudad_origen_destino.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_lista_servicios.xml" value="0.365625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_menu.xml" value="0.24270833333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_servicios.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_servicios_new.xml" value="0.2508038585209003" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/layout/activity_ubicacion_conductor.xml" value="0.365625" />
@@ -45,6 +46,7 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/milservicios/res/drawable/star_rating_bar_full.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/movescol/res/drawable/star_rating_bar_full.xml" value="0.21927083333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/tappblanco/res/drawable/star_rating_bar_full.xml" value="0.3807291666666667" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/uttu/res/drawable/star_rating_bar_full.xml" value="0.2578125" />
       </map>
     </option>
   </component>
