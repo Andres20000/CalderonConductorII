@@ -4,6 +4,7 @@
       <map>
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/drawable/ic_conductor_novedad.xml" value="0.22239583333333332" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/drawable/ic_icono.xml" value="0.23802083333333332" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/drawable/vista_velocimetro_distancia.xml" value="0.23541666666666666" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_informacion_servicio.xml" value="0.20833333333333334" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_lista_pasajeros.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/activity_lista_retrasos.xml" value="0.16822916666666668" />
@@ -16,6 +17,8 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/list_row.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/notificacion.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/vista_lista_chequeo.xml" value="0.21927083333333333" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/main/res/layout/vista_velocimetro_distancia.xml" value="0.2203125" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/transportesblanco/res/layout/vista_velocimetro_distancia.xml" value="0.2203125" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_compra.xml" value="1.0" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_productor/src/main/res/layout/vista_ventas.xml" value="0.21422101449275363" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/layout/item_switch.xml" value="0.2246376811594203" />
@@ -47,6 +50,8 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/movescol/res/drawable/star_rating_bar_full.xml" value="0.21927083333333333" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/tappblanco/res/drawable/star_rating_bar_full.xml" value="0.3807291666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/uttu/res/drawable/star_rating_bar_full.xml" value="0.2578125" />
+        <entry key="..\:/Rendszer/Desktop/TACTO/Conductor/FloatingWindowAndroid-master/FloatingWindowAndroid-master/app/src/main/res/layout/activity_main.xml" value="0.2536231884057971" />
+        <entry key="..\:/Rendszer/Desktop/TACTO/Conductor/FloatingWindowAndroid-master/FloatingWindowAndroid-master/app/src/main/res/layout/floating_layout.xml" value="0.2536231884057971" />
       </map>
     </option>
   </component>
