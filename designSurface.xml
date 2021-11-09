@@ -33,20 +33,32 @@
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/transportesblanco/res/drawable/circulo_blanco_style.xml" value="0.3765625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/CalderonConductorII NuevaVersion/app/src/transportesblanco/res/layout/vista_velocimetro_distancia.xml" value="0.2203125" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_compra.xml" value="1.0" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_mapa.xml" value="1.0" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_cliente/src/main/res/layout/vista_principal.xml" value="0.20380434782608695" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_productor/src/main/res/layout/vista_principal.xml" value="0.25" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/app_casero_productor/src/main/res/layout/vista_ventas.xml" value="0.21422101449275363" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/drawable/boton_azul_texto_normal.xml" value="0.3765625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/drawable/boton_naranja_normal.xml" value="0.3765625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/drawable/cajatexto_blanco_conborde.xml" value="0.3765625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/drawable/ic_icono_centrar_mapa.xml" value="0.3765625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/Casero/libreria_casero/src/main/res/layout/item_switch.xml" value="0.2246376811594203" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/EspiroAPP/app/src/main/res/layout/vista_espi_basal.xml" value="1.0" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/EspiroAPP/app/src/main/res/layout/vista_posible_diagnostico.xml" value="0.21354166666666666" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/EspiroAPP/libreria_espiroapp/src/main/res/drawable/ic_perfil_cara.xml" value="0.2171875" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/EspiroAPP/libreria_espiroapp/src/main/res/layout/vista_terminos_condiciones.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/PruebaImagenes/app/src/main/res/layout/fragment_principal.xml" value="0.1" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/boton_azul_texto_normal.xml" value="0.21666666666666667" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/boton_naranja_normal.xml" value="0.21666666666666667" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/cajatexto_blanco_conborde.xml" value="0.21666666666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/cajatexto_gris_conborde.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/cajatexto_gris_redondos.xml" value="0.3807291666666667" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/ic_icono_centrar_mapa.xml" value="0.21666666666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/listview_buscador.xml" value="0.3807291666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/drawable/rectangulo_blanco_generico.xml" value="0.1" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/itemview_buscador.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/listview_buscador.xml" value="0.365625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/spinner_generico.xml" value="0.365625" />
+        <entry key="..\:/Rendszer/AndroidStudioProjects/libreria_utilidades/utilidades/src/main/res/layout/vista_mapa_buscador.xml" value="0.2015625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/calderonRelease/res/drawable/bordestyleeditext.xml" value="0.3807291666666667" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/calderonRelease/res/drawable/star_rating_bar_full.xml" value="0.3765625" />
         <entry key="..\:/Rendszer/AndroidStudioProjects/pasajero-android/app/src/main/res/drawable/boton_redondeado_cancelar.xml" value="0.3765625" />
