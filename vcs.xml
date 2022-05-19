@@ -18,6 +18,14 @@
           <option name="url" value="https://github.com/RocketChat/Rocket.Chat.Android.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://adattar.rendszer.co/git/root/Pasajero_Android.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://adattar.rendszer.co" />
+          <option name="userName" value="tacto_santiago" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="E:\Rendszer\AndroidStudioProjects" />
