@@ -1,0 +1,6 @@
+<application>
+  <component name="ExternalResourceManagerImpl">
+    <resource url="http://schemas.android.com/apk/res/android" location="E:/Rendszer/AndroidStudioProjects/Pasajero_Android" />
+    <ignored-resource url="http://schemas.android.com/apk/res/android" />
+  </component>
+</application>
