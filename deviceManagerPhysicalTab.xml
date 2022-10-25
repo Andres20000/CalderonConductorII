@@ -1,0 +1,17 @@
+<application>
+  <component name="deviceManagerPhysicalTab">
+    <physicalDevices>
+      <PhysicalDevice>
+        <key>
+          <Key>
+            <type value="SERIAL_NUMBER" />
+            <value value="7D5C4AFCC771521352176FFA6E657D9A" />
+          </Key>
+        </key>
+        <name value="motorola moto g(8) power" />
+        <target value="Android 11.0" />
+        <api value="androidversion:30:null:null:true" />
+      </PhysicalDevice>
+    </physicalDevices>
+  </component>
+</application>
