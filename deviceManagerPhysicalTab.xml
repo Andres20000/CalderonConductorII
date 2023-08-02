@@ -5,6 +5,17 @@
         <key>
           <Key>
             <type value="SERIAL_NUMBER" />
+            <value value="ZY22D6BTT4" />
+          </Key>
+        </key>
+        <name value="motorola moto g(60)s" />
+        <target value="Android 12.0" />
+        <api value="androidversion:31:null:null:true" />
+      </PhysicalDevice>
+      <PhysicalDevice>
+        <key>
+          <Key>
+            <type value="SERIAL_NUMBER" />
             <value value="7D5C4AFCC771521352176FFA6E657D9A" />
           </Key>
         </key>
